@@ -4,17 +4,12 @@ import json
 import re
 
 # ==================== STATIC DATA STRINGS ====================
-# Breaking your numbers up into math equations prevents GitHub from 
-# matching them and corrupting your network data streams.
 HD_STORE_NUMBER = "6407"  
 
-# Token part 1: "8382815452"
-T1 = str(4191407726 * 2 + 1000)
-# Token part 2: "AAG43NBrpkmgAmD1rpf6HSzNH-OgbdI7lik"
-T2 = "AAG43NBr" + "pkmgAmD1" + "rpf6HSzN" + "H-OgbdI7" + "lik"
-
-# Chat ID: "7462699838"
-CID = str(3731349919 * 2)
+# We use plain text variables here now that the caching block is broken
+T1 = "8382815452"
+T2 = "AAG43NBrpkmgAmD1rpf6HSzNH-OgbdI7lik"
+CID = "7462699838"
 # ==============================================================
 
 def send_telegram_alert(sku, title, price):
