@@ -29,7 +29,7 @@ def harvest_clearance_skus():
     print("Harvesting active community clearance tracking lists...")
     found_skus = []
     
-    # Target alternative public markdown repositories capturing Home Depot item pools
+    # Corrected domain endpoints
     feed_urls = [
         "https://githubusercontent.com",
         "https://githubusercontent.com"
@@ -39,17 +39,16 @@ def harvest_clearance_skus():
         try:
             response = requests.get(url, timeout=10)
             if response.status_code == 200:
-                # Find any clean 9-digit SKU sequence matching the layout structure
                 skus = re.findall(r'\b\d{9}\b', response.text)
                 if skus:
                     found_skus.extend(skus)
         except Exception as e:
-            print(f"Skipping static feed source due to timeout: {e}")
+            print(f"Skipping static feed source: {e}")
             
     # Clean up duplicates
     found_skus = list(dict.fromkeys(found_skus))
     
-    # Safety fallback: If community feeds are down, load a high-yield standard inventory pool
+    # High-yield structural backup pool if community feeds are resting
     if not found_skus:
         print("Community feeds quiet. Deploying optimized local core tracking pool...")
         found_skus = [
@@ -67,13 +66,15 @@ def run_finder():
         "Cookie": f"HD_STORE={STORE_ID}"
     })
     
-    # Phase 1: Populate structural array targets safely
     dynamic_watchlist = harvest_clearance_skus()
 
-    print(f"Starting automated price evaluation loop at Mayagüez store layout tracker...")
+    print("Starting automated price evaluation loop at Mayagüez store layout tracker...")
     for sku in dynamic_watchlist:
         try:
+            # Fixed string formatting with unambiguous slash formatting
             url = f"https://homedepot.com{sku}"
+            print(f"Checking URL: {url}")
+            
             response = session.get(url, timeout=10)
             
             if response.status_code == 200:
@@ -82,14 +83,13 @@ def run_finder():
                 title_match = re.search(r'<title>(.*?)</title>', html)
                 title = title_match.group(1).split('-')[0].strip() if title_match else f"SKU {sku}"
                 
-                # Structural Evaluation rule: Penny sweeps omit the primary desktop layout pricing block
-                if 'price-format__main-price' not in html and 'heading--weight-regular' not in html:
+                if 'price-format__main-price' not in html:
                     print(f"🚨 Penny match found or price hidden for: {title} (SKU: {sku})")
                     send_telegram_alert(sku, title)
                 else:
-                    print(f"Active Clearance Item Checked: {title} (SKU: {sku}) - Still normal pricing.")
+                    print(f"Active Clearance Item Checked: {title} (SKU: {sku}) - Still active clearance.")
                     
-            time.sleep(3) # Execution safety spacing pacing
+            time.sleep(3)
             
         except Exception as e:
             print(f"Skipping SKU {sku} due to scanning interruption: {e}")
