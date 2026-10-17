@@ -84,5 +84,3 @@ def run_finder():
 
 if __name__ == "__main__":
     run_finder()
-    print("Sending a live connection test to your Telegram app...")
-    send_telegram_alert("123456789", "TEST ALERT: Your Mayagüez Penny Finder is Connected!", "TEST")
