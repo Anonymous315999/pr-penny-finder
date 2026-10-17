@@ -4,17 +4,17 @@ on:
   schedule:
     # 10:00 UTC corresponds to 6:00 AM AST (Puerto Rico Time)
     - cron: '0 10 * * *'
-  workflow_dispatch: # This allows you to manually press "Play" anytime to test it
+  workflow_dispatch: # Allows you to manually click "Run workflow" to test
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Updated to fix Node warning
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # Updated to fix Node warning
         with:
           python-version: '3.10'
 
