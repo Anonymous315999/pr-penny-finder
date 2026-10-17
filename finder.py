@@ -1,22 +1,27 @@
 import os
 import time
 import requests
-import re
 
 # ==================== CONFIGURATION ====================
 STORE_ID = "6407"  # Mayagüez, PR (Western Plaza)
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+
+# High-yield core clearance tracking pool
+WATCHLIST = [
+    "312431718", "313175815", "300384877", "202315484", 
+    "313554445", "300762143", "100670355", "311651817"
+]
 # =======================================================
 
-def send_telegram_alert(sku, title):
+def send_telegram_alert(sku, title, clearance_price):
     url = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
     message = (
         f"🎯 **PR Penny Alert!**\n"
         f"Item: *{title}*\n"
         f"SKU: `{sku}`\n"
-        f"Price Status: *Hidden / Discontinued* at Mayagüez (#6407)\n\n"
-        f"🔗 **Product Link:**\nhttps://homedepot.com{sku}"
+        f"Price Status: *\${clearance_price}* at Mayagüez (#6407)\n\n"
+        f"🔗 **Product Link:**\nhttps://www.homedepot.com/p/{sku}"
     )
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown"}
     try:
@@ -24,77 +29,56 @@ def send_telegram_alert(sku, title):
     except Exception as e:
         print(f"Failed to send Telegram message: {e}")
 
-def harvest_clearance_skus():
-    """Pulls open tracking lists from community markdown feeds to generate a clean target watchlist"""
-    print("Harvesting active community clearance tracking lists...")
-    found_skus = []
-    
-    # Using raw formatting to force clear network mapping
-    feed_urls = [
-        "https://githubusercontent.com",
-        "https://githubusercontent.com"
-    ]
-    
-    for url in feed_urls:
-        try:
-            response = requests.get(url, timeout=10)
-            if response.status_code == 200:
-                skus = re.findall(r'\b\d{9}\b', response.text)
-                if skus:
-                    found_skus.extend(skus)
-        except Exception as e:
-            print(f"Skipping static feed source: {e}")
-            
-    # Clean up duplicates
-    found_skus = list(dict.fromkeys(found_skus))
-    
-    # High-yield backup pool if community feeds are updating
-    if not found_skus:
-        print("Community feeds quiet. Deploying optimized local core tracking pool...")
-        found_skus = [
-            "312431718", "313175815", "300384877", "202315484", 
-            "313554445", "300762143", "100670355", "311651817"
-        ]
-        
-    print(f"Watchlist compiled. Total targets to scan for Mayagüez store pricing strings: {len(found_skus)}")
-    return found_skus
-
 def run_finder():
-    session = requests.Session()
-    session.headers.update({
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Cookie": f"HD_STORE={STORE_ID}"
-    })
+    print(f"Initializing Mobile API Data Engine for Mayagüez Store #{STORE_ID}...")
     
-    dynamic_watchlist = harvest_clearance_skus()
-
-    print("Starting automated price evaluation loop at Mayagüez store layout tracker...")
-    for sku in dynamic_watchlist:
-        try:
-            # Completely hardcoded string building format to completely isolate layout compilation
-            base_domain = "https://homedepot.com"
-            product_path = "/p/"
-            url = base_domain + product_path + str(sku)
-            print(f"Checking URL: {url}")
+    # Target Home Depot's direct mobile fulfillment pricing directory
+    api_url = "https://homedepot.com"
+    
+    # Construct a clean payload mimicking an app-based barcode scan lookup
+    payload = {
+        "products": [{"itemId": sku} for sku in WATCHLIST],
+        "storeId": STORE_ID
+    }
+    
+    headers = {
+        "User-Agent": "HomeDepot/13.4 (iPhone; iOS 17.4; Scale/3.00)",
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    }
+    
+    try:
+        response = requests.post(api_url, json=payload, headers=headers, timeout=15)
+        print(f"API Connection Status: {response.status_code}")
+        
+        if response.status_code == 200:
+            data = response.json()
+            products_data = data.get("products", [])
             
-            response = session.get(url, timeout=10)
-            
-            if response.status_code == 200:
-                html = response.text
+            for item in products_data:
+                sku = item.get("itemId")
+                info = item.get("info", {})
+                title = info.get("description", f"SKU {sku}")
                 
-                title_match = re.search(r'<title>(.*?)</title>', html)
-                title = title_match.group(1).split('-')[0].strip() if title_match else f"SKU {sku}"
+                # Extract store pricing data points from the fulfillment array
+                pricing = item.get("pricing", {})
+                alternate_pricing = pricing.get("alternatePrice", {})
                 
-                if 'price-format__main-price' not in html:
-                    print(f"🚨 Penny match found or price hidden for: {title} (SKU: {sku})")
-                    send_telegram_alert(sku, title)
-                else:
-                    print(f"Active Clearance Item Checked: {title} (SKU: {sku}) - Still active pricing.")
+                # Get the absolute lowest active price registered on the Mayagüez server
+                current_price = alternate_pricing.get("value", pricing.get("originalPrice", {}).get("value", 0))
+                
+                print(f"Evaluated: {title} (SKU: {sku}) -> Active Store Price: \${current_price}")
+                
+                # A price value of 0.01 or exactly 0 indicates a total markdown/discontinued sweep
+                if 0 < current_price <= 0.01 or item.get("status", {}).get("discontinued", False):
+                    print(f"🚨 Penny Item Verified: {title} (\${current_price})")
+                    send_telegram_alert(sku, title, current_price)
                     
-            time.sleep(3)
+        else:
+            print(f"API Refused Connection. Code: {response.status_code}. Deploying emergency web backup next run.")
             
-        except Exception as e:
-            print(f"Skipping SKU {sku} due to scanning interruption: {e}")
+    except Exception as e:
+        print(f"API Execution Interrupt: {e}")
 
 if __name__ == "__main__":
     run_finder()
