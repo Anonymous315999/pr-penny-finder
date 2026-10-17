@@ -9,8 +9,11 @@ TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 # =======================================================
 
-def send_telegram_alert(sku, title, price="Hidden/Penny"):
-    url = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
+def send_telegram_alert(sku, title, price):
+    # Ensure the URL string is constructed perfectly without token contamination
+    clean_token = str(TELEGRAM_TOKEN).strip().replace("https://", "").replace("api.telegram.org/bot", "")
+    url = f"https://telegram.org{clean_token}/sendMessage"
+    
     message = (
         f"🎯 **PR Penny Alert!**\n"
         f"Item: *{title}*\n"
@@ -18,9 +21,13 @@ def send_telegram_alert(sku, title, price="Hidden/Penny"):
         f"Price Status: *{price}* at Mayagüez (#6407)\n\n"
         f"🔗 **Product Link:**\nhttps://homedepot.com{sku}"
     )
-    payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown"}
+    payload = {"chat_id": str(TELEGRAM_CHAT_ID).strip(), "text": message, "parse_mode": "Markdown"}
     try:
-        requests.post(url, json=payload, timeout=10)
+        res = requests.post(url, json=payload, timeout=10)
+        if res.status_code == 200:
+            print(f"Successfully sent Telegram alert for SKU {sku}")
+        else:
+            print(f"Telegram server rejected message. Code: {res.status_code}, Response: {res.text}")
     except Exception as e:
         print(f"Failed to send Telegram message: {e}")
 
@@ -50,7 +57,6 @@ def run_finder():
             print("Server returned an empty data response.")
             return
 
-        # Safely extract product IDs using plain regular expression patterns
         skus = re.findall(r'"itemId"\s*:\s*"(\d{9})"', raw_text)
         if not skus:
             skus = re.findall(r'"productId"\s*:\s*"(\d{9})"', raw_text)
@@ -60,7 +66,6 @@ def run_finder():
             print(f"Successfully harvested {len(unique_skus)} active items from the Mayagüez feed.")
             
             for sku in unique_skus:
-                # Fixed string formatting by avoiding complex nested f-strings
                 pattern_string = r'"itemId"\s*:\s*"' + str(sku) + r'".*?\}\s*,\s*\{"itemId"'
                 item_block_match = re.search(pattern_string, raw_text, re.DOTALL)
                 
@@ -79,8 +84,9 @@ def run_finder():
                     
                     print(f"Scanning: {title} (SKU: {sku}) -> Store Price: \${current_price}")
                     
-                    if current_price == 0.01 or current_price == 0.0:
-                        print(f"🚨 Match Flagged! Sending notification for {title}...")
+                    # Strictly check for verified \$0.01 penny drops
+                    if current_price == 0.01:
+                        print(f"🚨 Verified Penny Item Flagged! Sending notification for {title}...")
                         send_telegram_alert(sku, title, f"\${current_price}")
         else:
             print("No text data properties matched the structural SKU patterns today.")
