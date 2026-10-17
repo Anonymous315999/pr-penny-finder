@@ -95,9 +95,9 @@ def run_finder():
         print(f"System execution interrupted: {e}")
 
 if __name__ == "__main__":
-    # 1. This runs your regular Mayagüez database scan
+    # 1. Runs the regular Mayagüez database scan
     run_finder()
     
-    # 2. TEMPORARY TEST LINE: This forces a fake alert to test your Telegram connection
+    # 2. FIXED TEST LINE: Includes the pricing parameter to prevent TypeErrors
     print("Sending a live connection test to your Telegram app...")
-    send_telegram_alert("123456789", "TEST ALERT: Your Mayagüez Penny Finder is Connected!")
+    send_telegram_alert("123456789", "TEST ALERT: Your Mayagüez Penny Finder is Connected!", "TEST")
