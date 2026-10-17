@@ -10,9 +10,12 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 # =======================================================
 
 def send_telegram_alert(sku, title, price):
-    # Ensure the URL string is constructed perfectly without token contamination
-    clean_token = str(TELEGRAM_TOKEN).strip().replace("https://", "").replace("api.telegram.org/bot", "")
-    url = f"https://telegram.org{clean_token}/sendMessage"
+    # Hardcode the clean base token extraction to completely isolate variable mashups
+    bot_token = str(TELEGRAM_TOKEN).strip()
+    chat_id = str(TELEGRAM_CHAT_ID).strip()
+    
+    # Completely distinct URL mapping string to prevent parsing host resolution issues
+    url = "https://telegram.org" + bot_token + "/sendMessage"
     
     message = (
         f"🎯 **PR Penny Alert!**\n"
@@ -21,13 +24,20 @@ def send_telegram_alert(sku, title, price):
         f"Price Status: *{price}* at Mayagüez (#6407)\n\n"
         f"🔗 **Product Link:**\nhttps://homedepot.com{sku}"
     )
-    payload = {"chat_id": str(TELEGRAM_CHAT_ID).strip(), "text": message, "parse_mode": "Markdown"}
+    
+    payload = {
+        "chat_id": chat_id,
+        "text": message,
+        "parse_mode": "Markdown"
+    }
+    
     try:
+        # Send raw connection without internal dynamic link modifications
         res = requests.post(url, json=payload, timeout=10)
         if res.status_code == 200:
             print(f"Successfully sent Telegram alert for SKU {sku}")
         else:
-            print(f"Telegram server rejected message. Code: {res.status_code}, Response: {res.text}")
+            print(f"Telegram server rejected credentials. Code: {res.status_code}, Response: {res.text}")
     except Exception as e:
         print(f"Failed to send Telegram message: {e}")
 
@@ -84,7 +94,6 @@ def run_finder():
                     
                     print(f"Scanning: {title} (SKU: {sku}) -> Store Price: \${current_price}")
                     
-                    # Strictly check for verified \$0.01 penny drops
                     if current_price == 0.01:
                         print(f"🚨 Verified Penny Item Flagged! Sending notification for {title}...")
                         send_telegram_alert(sku, title, f"\${current_price}")
@@ -98,6 +107,6 @@ if __name__ == "__main__":
     # 1. Runs the regular Mayagüez database scan
     run_finder()
     
-    # 2. FIXED TEST LINE: Includes the pricing parameter to prevent TypeErrors
+    # 2. Hardcoded test alert block with isolated parameters
     print("Sending a live connection test to your Telegram app...")
     send_telegram_alert("123456789", "TEST ALERT: Your Mayagüez Penny Finder is Connected!", "TEST")
