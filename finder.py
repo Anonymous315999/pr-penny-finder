@@ -4,18 +4,18 @@ import requests
 import re
 
 # ==================== CONFIGURATION ====================
-STORE_ID = "6407"  # Mayagüez, PR
+STORE_ID = "6407"  # Mayagüez, PR (Western Plaza)
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 # =======================================================
 
-def send_telegram_alert(sku, title, price="Hidden/Penny"):
+def send_telegram_alert(sku, title):
     url = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
     message = (
         f"🎯 **PR Penny Alert!**\n"
         f"Item: *{title}*\n"
         f"SKU: `{sku}`\n"
-        f"Price Status: *{price}* at Mayagüez (#6407)\n\n"
+        f"Price Status: *Hidden / Discontinued* at Mayagüez (#6407)\n\n"
         f"🔗 **Product Link:**\nhttps://homedepot.com{sku}"
     )
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown"}
@@ -29,20 +29,27 @@ def harvest_clearance_skus(session):
     print("Harvesting active clearance SKUs from Mayagüez...")
     found_skus = []
     
-    # Fixed URL structure to prevent NameResolutionErrors
-    search_url = f"https://homedepot.com{STORE_ID}&pageSize=48"
+    # Clean URL construction without string concatenation risks
+    search_url = "https://homedepot.com"
+    target_params = {
+        "storeSelection": STORE_ID,
+        "pageSize": "48"
+    }
     
     try:
-        response = session.get(search_url, timeout=15)
+        response = session.get(search_url, params=target_params, timeout=15)
+        print(f"Connected to feed. Current URL checked: {response.url}")
+        
         if response.status_code == 200:
+            # Locate all 9-digit structural product IDs
             skus = re.findall(r'"productId":"(\d{9})"', response.text)
             if skus:
                 found_skus = list(dict.fromkeys(skus))
                 print(f"Successfully harvested {len(found_skus)} active items to monitor.")
             else:
-                print("No product IDs matched in the source text layout.")
+                print("Connected but no matching Product IDs were found in the page data layout.")
         else:
-            print(f"Server responded with status code: {response.status_code}")
+            print(f"Server responded with structural error status code: {response.status_code}")
     except Exception as e:
         print(f"Error harvesting SKUs: {e}")
         
@@ -75,6 +82,7 @@ def run_finder():
                 title_match = re.search(r'<title>(.*?)</title>', html)
                 title = title_match.group(1).split('-')[0].strip() if title_match else f"SKU {sku}"
                 
+                # Check for omission of pricing metrics (Penny Status Flag)
                 if 'price-format__main-price' not in html:
                     print(f"🚨 Penny match found or price hidden for: {title} (SKU: {sku})")
                     send_telegram_alert(sku, title)
