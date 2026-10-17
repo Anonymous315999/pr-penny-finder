@@ -5,23 +5,15 @@ import re
 
 # ==================== CONFIGURATION ====================
 STORE_ID = "6407"  # Mayagüez, PR (Western Plaza)
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+
+# Hardcoding your actual keys directly eliminates GitHub layout parsing issues
+TELEGRAM_TOKEN = "8382815452:AAG43NBrpkmgAmD1rpf6HSzNH-OgbdI7lik"
+TELEGRAM_CHAT_ID = "7462699838"
 # =======================================================
 
 def send_telegram_alert(sku, title, price):
-    # STRIP ABSOLUTELY EVERYTHING EXCEPT THE ACTUAL TOKEN PARTS
-    # This removes 'https://', 'api.telegram.org', '/bot', and extra spaces automatically
-    token_string = str(TELEGRAM_TOKEN).strip()
-    
-    if "bot" in token_string:
-        token_string = token_string.split("bot")[-1]
-    
-    clean_token = token_string.replace("https://", "").replace("api.telegram.org", "").replace("/", "").strip()
-    clean_chat_id = str(TELEGRAM_CHAT_ID).strip()
-    
-    # Construct the final destination address using completely clean properties
-    url = f"https://telegram.org{clean_token}/sendMessage"
+    # Constructing a direct destination string using pure, authenticated variables
+    url = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
     
     message = (
         f"🎯 **PR Penny Alert!**\n"
@@ -32,7 +24,7 @@ def send_telegram_alert(sku, title, price):
     )
     
     payload = {
-        "chat_id": clean_chat_id,
+        "chat_id": TELEGRAM_CHAT_ID,
         "text": message,
         "parse_mode": "Markdown"
     }
@@ -42,7 +34,7 @@ def send_telegram_alert(sku, title, price):
         if res.status_code == 200:
             print(f"Successfully sent Telegram alert for SKU {sku}")
         else:
-            print(f"Telegram server rejected credentials. Code: {res.status_code}, Response: {res.text}")
+            print(f"Telegram server rejected connection. Code: {res.status_code}, Response: {res.text}")
     except Exception as e:
         print(f"Failed to send Telegram message: {e}")
 
