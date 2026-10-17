@@ -1,19 +1,19 @@
+import os
 import time
 import urllib.request
 import json
 import re
 
-# ==================== STATIC DATA STRINGS ====================
+# ==================== DATA CONFIGURATION ====================
 HD_STORE_NUMBER = "6407"  # Mayagüez, PR (Western Plaza)
 
-# Verified working Telegram credentials
-T1 = "8382815452"
-T2 = "AAG43NBrpkmgAmD1rpf6HSzNH-OgbdI7lik"
-CID = "7462699838"
-# ==============================================================
+# The script now extracts keys securely out of the environment panel
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+# ============================================================
 
 def send_telegram_alert(sku, title, price="Hidden/Penny"):
-    url = f"https://telegram.org{T1}:{T2}/sendMessage"
+    url = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
     
     message = (
         f"🎯 **PR Penny Alert!**\n"
@@ -24,7 +24,7 @@ def send_telegram_alert(sku, title, price="Hidden/Penny"):
     )
     
     payload = {
-        "chat_id": CID,
+        "chat_id": TELEGRAM_CHAT_ID,
         "text": message,
         "parse_mode": "Markdown"
     }
@@ -42,29 +42,23 @@ def send_telegram_alert(sku, title, price="Hidden/Penny"):
         print(f"Failed to send Telegram message: {e}")
 
 def run_finder():
-    print("Initializing Expanded 30-Item Watchlist Engine for Mayagüez...")
+    print("Initializing Automated Watchlist Engine for Mayagüez...")
     
-    # Massive tracking array focused strictly on categories prone to sweeping price drops
     automated_watchlist = [
-        # --- POWER TOOLS & HARDWARE ---
         "312431718", "313175815", "300384877", "202315484", 
         "313554445", "300762143", "100670355", "311651817",
         "314227225", "315112102", "310565882", "311102891",
-        # --- ELECTRICAL & LIGHTING ---
         "303962823", "311003440", "311004608", "323888516",
         "314567890", "315444552", "308996412", "312224562",
-        # --- SMART HOME & HOME GOODS ---
         "320199695", "320203635", "323298354", "314129069",
-        # --- PLUMBING & GARDEN HARDWARE ---
         "333905187", "333905173", "336161494", "333291024",
         "330588184", "327657350"
     ]
         
-    print(f"Watchlist expanded! Scanning {len(automated_watchlist)} high-yield targets for Mayagüez pricing updates...")
+    print(f"Scanning {len(automated_watchlist)} high-yield targets for Mayagüez pricing updates...")
     
     for sku in automated_watchlist:
         try:
-            # Direct internal mobile network pricing path
             price_url = f"https://homedepot.com{HD_STORE_NUMBER}"
             item_payload = {"itemId": sku}
             
@@ -91,7 +85,7 @@ def run_finder():
                 print(f"🚨 Match Found! Item hit penny status at your store.")
                 send_telegram_alert(sku, f"SKU {sku}", f"\${current_price}")
                 
-            time.sleep(1.5) # Fast database pacing optimization
+            time.sleep(1.5)
             
         except Exception:
             print(f"Scanning SKU: {sku}... Verified active on local inventory sheets.")
