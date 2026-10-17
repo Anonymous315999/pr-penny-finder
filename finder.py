@@ -10,12 +10,8 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 # =======================================================
 
 def send_telegram_alert(sku, title, price):
-    # Hardcode the clean base token extraction to completely isolate variable mashups
-    bot_token = str(TELEGRAM_TOKEN).strip()
-    chat_id = str(TELEGRAM_CHAT_ID).strip()
-    
-    # Completely distinct URL mapping string to prevent parsing host resolution issues
-    url = "https://telegram.org" + bot_token + "/sendMessage"
+    # Pass your clean repository secrets directly into the link structure
+    url = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
     
     message = (
         f"🎯 **PR Penny Alert!**\n"
@@ -26,13 +22,12 @@ def send_telegram_alert(sku, title, price):
     )
     
     payload = {
-        "chat_id": chat_id,
+        "chat_id": TELEGRAM_CHAT_ID,
         "text": message,
         "parse_mode": "Markdown"
     }
     
     try:
-        # Send raw connection without internal dynamic link modifications
         res = requests.post(url, json=payload, timeout=10)
         if res.status_code == 200:
             print(f"Successfully sent Telegram alert for SKU {sku}")
