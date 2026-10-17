@@ -21,7 +21,7 @@ def send_telegram_alert(sku, title, clearance_price):
         f"Item: *{title}*\n"
         f"SKU: `{sku}`\n"
         f"Price Status: *\${clearance_price}* at Mayagüez (#6407)\n\n"
-        f"🔗 **Product Link:**\nhttps://www.homedepot.com/p/{sku}"
+        f"🔗 **Product Link:**\nhttps://homedepot.com{sku}"
     )
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message, "parse_mode": "Markdown"}
     try:
@@ -32,53 +32,57 @@ def send_telegram_alert(sku, title, clearance_price):
 def run_finder():
     print(f"Initializing Mobile API Data Engine for Mayagüez Store #{STORE_ID}...")
     
-    # Target Home Depot's direct mobile fulfillment pricing directory
-    api_url = "https://homedepot.com"
+    # Target Home Depot's explicit mobile pricing registry endpoint
+    api_url = f"https://homedepot.com{STORE_ID}"
     
-    # Construct a clean payload mimicking an app-based barcode scan lookup
-    payload = {
-        "products": [{"itemId": sku} for sku in WATCHLIST],
-        "storeId": STORE_ID
-    }
-    
+    # Format structural lookup parameters matching standard app search arrays
     headers = {
-        "User-Agent": "HomeDepot/13.4 (iPhone; iOS 17.4; Scale/3.00)",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+        "Accept": "application/json",
+        "Content-Type": "application/json"
     }
     
-    try:
-        response = requests.post(api_url, json=payload, headers=headers, timeout=15)
-        print(f"API Connection Status: {response.status_code}")
-        
-        if response.status_code == 200:
-            data = response.json()
-            products_data = data.get("products", [])
+    for sku in WATCHLIST:
+        try:
+            # Query items individually to avoid structural array nesting errors
+            item_payload = {"itemId": sku}
+            response = requests.post(api_url, json=item_payload, headers=headers, timeout=15)
             
-            for item in products_data:
-                sku = item.get("itemId")
-                info = item.get("info", {})
-                title = info.get("description", f"SKU {sku}")
-                
-                # Extract store pricing data points from the fulfillment array
-                pricing = item.get("pricing", {})
-                alternate_pricing = pricing.get("alternatePrice", {})
-                
-                # Get the absolute lowest active price registered on the Mayagüez server
-                current_price = alternate_pricing.get("value", pricing.get("originalPrice", {}).get("value", 0))
-                
-                print(f"Evaluated: {title} (SKU: {sku}) -> Active Store Price: \${current_price}")
-                
-                # A price value of 0.01 or exactly 0 indicates a total markdown/discontinued sweep
-                if 0 < current_price <= 0.01 or item.get("status", {}).get("discontinued", False):
-                    print(f"🚨 Penny Item Verified: {title} (\${current_price})")
-                    send_telegram_alert(sku, title, current_price)
+            # Verify text is present before running structured decoding parsing
+            if response.status_code == 200 and response.text.strip():
+                try:
+                    data = response.json()
                     
-        else:
-            print(f"API Refused Connection. Code: {response.status_code}. Deploying emergency web backup next run.")
+                    # Extract values from the API pricing map
+                    pricing_info = data.get("pricingInfo", {})
+                    title = data.get("description", f"SKU {sku}")
+                    
+                    # Read structural price properties
+                    current_price = pricing_info.get("unitPrice", 0.0)
+                    
+                    print(f"Evaluated: {title} (SKU: {sku}) -> Active Store Price: \${current_price}")
+                    
+                    if 0.0 < current_price <= 0.01:
+                        print(f"🚨 Penny Item Verified: {title} (\${current_price})")
+                        send_telegram_alert(sku, title, current_price)
+                
+                except ValueError:
+                    # Fallback text parsing block if server sends plain text mapping strings
+                    price_match = re.search(r'"unitPrice":\s*([0-9.]+)', response.text)
+                    if price_match:
+                        current_price = float(price_match.group(1))
+                        print(f"Evaluated (Text Mode): SKU {sku} -> Active Store Price: \${current_price}")
+                        if 0.0 < current_price <= 0.01:
+                            send_telegram_alert(sku, f"SKU {sku}", current_price)
+                    else:
+                        print(f"SKU {sku} processed but active local inventory is unindexed online today.")
+            else:
+                print(f"SKU {sku} omitted from digital inventory feed layout (Possible Penny / Out of Stock).")
+                
+            time.sleep(2) # Security pacing delay spacing
             
-    except Exception as e:
-        print(f"API Execution Interrupt: {e}")
+        except Exception as e:
+            print(f"Skipping target iteration for SKU {sku}: {e}")
 
 if __name__ == "__main__":
     run_finder()
