@@ -1,0 +1,28 @@
+name: Daily PR Penny Scan
+
+on:
+  schedule:
+    # 10:00 UTC corresponds to 6:00 AM AST (Puerto Rico Time)
+    - cron: '0 10 * * *'
+  workflow_dispatch: # This allows you to manually press "Play" anytime to test it
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Execute Finder Script
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python finder.py
