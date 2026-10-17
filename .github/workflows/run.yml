@@ -2,24 +2,20 @@ name: Daily PR Penny Scan
 
 on:
   schedule:
-    # 10:00 UTC corresponds to 6:00 AM AST (Puerto Rico Time)
     - cron: '0 10 * * *'
-  workflow_dispatch: # Allows you to manually click "Run workflow" to test
+  workflow_dispatch:
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository code
-        uses: actions/checkout@v4  # Updated to fix Node warning
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5  # Updated to fix Node warning
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
-      - name: Install dependencies
-        run: pip install requests beautifulsoup4
 
       - name: Execute Finder Script
         env:
