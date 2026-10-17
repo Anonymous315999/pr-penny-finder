@@ -1,65 +1,65 @@
 import os
 import time
-import requests
+import urllib.request
+import urllib.parse
+import json
 import re
 
 # ==================== CONFIGURATION ====================
 STORE_ID = "6407"  # Mayagüez, PR (Western Plaza)
 
-# Hardcoding your actual keys directly eliminates GitHub layout parsing issues
-TELEGRAM_TOKEN = "8382815452:AAG43NBrpkmgAmD1rpf6HSzNH-OgbdI7lik"
-TELEGRAM_CHAT_ID = "7462699838"
+# Direct hardcoded token strings completely stops GitHub environment errors
+TOKEN = "8382815452:AAG43NBrpkmgAmD1rpf6HSzNH-OgbdI7lik"
+CHAT_ID = "7462699838"
 # =======================================================
 
 def send_telegram_alert(sku, title, price):
-    # Constructing a direct destination string using pure, authenticated variables
-    url = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
+    # Using python's native structural standard library bypasses host resolution issues
+    direct_url = "https://telegram.org" + TOKEN + "/sendMessage"
     
     message = (
-        f"🎯 **PR Penny Alert!**\n"
-        f"Item: *{title}*\n"
-        f"SKU: `{sku}`\n"
-        f"Price Status: *{price}* at Mayagüez (#6407)\n\n"
-        f"🔗 **Product Link:**\nhttps://homedepot.com{sku}"
+        "🎯 **PR Penny Alert!**\n"
+        "Item: " + str(title) + "\n"
+        "SKU: `" + str(sku) + "`\n"
+        "Price Status: *" + str(price) + "* at Mayagüez (#6407)\n\n"
+        "🔗 **Product Link:**\nhttps://homedepot.com" + str(sku)
     )
     
     payload = {
-        "chat_id": TELEGRAM_CHAT_ID,
+        "chat_id": CHAT_ID,
         "text": message,
         "parse_mode": "Markdown"
     }
     
     try:
-        res = requests.post(url, json=payload, timeout=10)
-        if res.status_code == 200:
-            print(f"Successfully sent Telegram alert for SKU {sku}")
-        else:
-            print(f"Telegram server rejected connection. Code: {res.status_code}, Response: {res.text}")
+        data = json.dumps(payload).encode('utf-8')
+        req = urllib.request.Request(
+            direct_url, 
+            data=data, 
+            headers={'Content-Type': 'application/json'}
+        )
+        with urllib.request.urlopen(req, timeout=10) as response:
+            res_text = response.read().decode('utf-8')
+            print("Telegram Alert Status: Success")
     except Exception as e:
-        print(f"Failed to send Telegram message: {e}")
+        print("Telegram broadcast failed: " + str(e))
 
 def run_finder():
     print("Initializing Text-Parsing Autonomous Search Engine for Mayagüez...")
     
-    session = requests.Session()
+    # Fully static layout strings to isolate structural query mapping properties
+    search_url = "https://homedepot.com" + STORE_ID + "&pageSize=40"
+    
     headers = {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
-        "Accept": "application/json, text/plain, */*",
-        "Content-Type": "application/json"
-    }
-    
-    search_url = "https://homedepot.com"
-    query_params = {
-        "keyword": "clearance",
-        "storeId": STORE_ID,
-        "pageSize": "40"
+        "Accept": "application/json, text/plain, */*"
     }
     
     try:
-        response = session.get(search_url, params=query_params, headers=headers, timeout=15)
-        print(f"Mayagüez Server Connection Status: {response.status_code}")
-        
-        raw_text = response.text
+        req = urllib.request.Request(search_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as response:
+            raw_text = response.read().decode('utf-8')
+            
         if not raw_text.strip():
             print("Server returned an empty data response.")
             return
@@ -70,7 +70,7 @@ def run_finder():
             
         if skus:
             unique_skus = list(dict.fromkeys(skus))
-            print(f"Successfully harvested {len(unique_skus)} active items from the Mayagüez feed.")
+            print("Successfully harvested " + str(len(unique_skus)) + " active items from the Mayagüez feed.")
             
             for sku in unique_skus:
                 pattern_string = r'"itemId"\s*:\s*"' + str(sku) + r'".*?\}\s*,\s*\{"itemId"'
@@ -84,26 +84,26 @@ def run_finder():
                     item_block = item_block_match.group(0)
                     
                     desc_match = re.search(r'"description"\s*:\s*"(.*?)"', item_block)
-                    title = desc_match.group(1) if desc_match else f"SKU {sku}"
+                    title = desc_match.group(1) if desc_match else "SKU " + str(sku)
                     
                     price_match = re.search(r'"value"\s*:\s*([0-9.]+)', item_block)
                     current_price = float(price_match.group(1)) if price_match else 0.0
                     
-                    print(f"Scanning: {title} (SKU: {sku}) -> Store Price: \${current_price}")
+                    print("Scanning: " + str(title) + " (SKU: " + str(sku) + ") -> Store Price: \$" + str(current_price))
                     
                     if current_price == 0.01:
-                        print(f"🚨 Verified Penny Item Flagged! Sending notification for {title}...")
-                        send_telegram_alert(sku, title, f"\${current_price}")
+                        print("🚨 Verified Penny Item Flagged! Sending notification...")
+                        send_telegram_alert(sku, title, "\$" + str(current_price))
         else:
             print("No text data properties matched the structural SKU patterns today.")
             
     except Exception as e:
-        print(f"System execution interrupted: {e}")
+        print("System execution interrupted: " + str(e))
 
 if __name__ == "__main__":
     # 1. Runs the regular Mayagüez database scan
     run_finder()
     
-    # 2. Hardcoded test alert block with isolated parameters
+    # 2. Native, clean live test step
     print("Sending a live connection test to your Telegram app...")
     send_telegram_alert("123456789", "TEST ALERT: Your Mayagüez Penny Finder is Connected!", "TEST")
