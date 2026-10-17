@@ -1,6 +1,7 @@
 import os
 import time
 import requests
+import re
 
 # ==================== CONFIGURATION ====================
 STORE_ID = "6407"  # Mayagüez, PR (Western Plaza)
@@ -32,10 +33,10 @@ def send_telegram_alert(sku, title, clearance_price):
 def run_finder():
     print(f"Initializing Mobile API Data Engine for Mayagüez Store #{STORE_ID}...")
     
-    # Target Home Depot's explicit mobile pricing registry endpoint
-    api_url = f"https://homedepot.com{STORE_ID}"
+    # Completely isolated URL string to avoid string formatting mashups
+    api_url = "https://homedepot.com"
+    query_params = {"storeId": STORE_ID}
     
-    # Format structural lookup parameters matching standard app search arrays
     headers = {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
         "Accept": "application/json",
@@ -44,20 +45,15 @@ def run_finder():
     
     for sku in WATCHLIST:
         try:
-            # Query items individually to avoid structural array nesting errors
             item_payload = {"itemId": sku}
-            response = requests.post(api_url, json=item_payload, headers=headers, timeout=15)
+            # Passing params separately ensures Python constructs the URL safely with a proper '?' sign
+            response = requests.post(api_url, params=query_params, json=item_payload, headers=headers, timeout=15)
             
-            # Verify text is present before running structured decoding parsing
             if response.status_code == 200 and response.text.strip():
                 try:
                     data = response.json()
-                    
-                    # Extract values from the API pricing map
                     pricing_info = data.get("pricingInfo", {})
                     title = data.get("description", f"SKU {sku}")
-                    
-                    # Read structural price properties
                     current_price = pricing_info.get("unitPrice", 0.0)
                     
                     print(f"Evaluated: {title} (SKU: {sku}) -> Active Store Price: \${current_price}")
@@ -67,7 +63,7 @@ def run_finder():
                         send_telegram_alert(sku, title, current_price)
                 
                 except ValueError:
-                    # Fallback text parsing block if server sends plain text mapping strings
+                    # Text parsing fallback logic
                     price_match = re.search(r'"unitPrice":\s*([0-9.]+)', response.text)
                     if price_match:
                         current_price = float(price_match.group(1))
@@ -79,7 +75,7 @@ def run_finder():
             else:
                 print(f"SKU {sku} omitted from digital inventory feed layout (Possible Penny / Out of Stock).")
                 
-            time.sleep(2) # Security pacing delay spacing
+            time.sleep(2)
             
         except Exception as e:
             print(f"Skipping target iteration for SKU {sku}: {e}")
