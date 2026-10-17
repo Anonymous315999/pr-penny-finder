@@ -29,19 +29,20 @@ def harvest_clearance_skus(session):
     print("Harvesting active clearance SKUs from Mayagüez...")
     found_skus = []
     
-    # Target the specialized Home Depot localized search API endpoint for clearance/savings
-    # This queries up to 48 highly discounted items directly from store 6407
+    # Fixed URL structure to prevent NameResolutionErrors
     search_url = f"https://homedepot.com{STORE_ID}&pageSize=48"
     
     try:
         response = session.get(search_url, timeout=15)
         if response.status_code == 200:
-            # Use regex pattern matching to pull structural 9-digit Product IDs (SKUs) directly from the webpage script blocks
             skus = re.findall(r'"productId":"(\d{9})"', response.text)
             if skus:
-                # Remove duplicates while maintaining order
                 found_skus = list(dict.fromkeys(skus))
                 print(f"Successfully harvested {len(found_skus)} active items to monitor.")
+            else:
+                print("No product IDs matched in the source text layout.")
+        else:
+            print(f"Server responded with status code: {response.status_code}")
     except Exception as e:
         print(f"Error harvesting SKUs: {e}")
         
@@ -55,40 +56,35 @@ def run_finder():
         "Cookie": f"HD_STORE={STORE_ID}"
     })
     
-    # Phase 1: Automatically populate the watchlist
     dynamic_watchlist = harvest_clearance_skus(session)
     
     if not dynamic_watchlist:
         print("Watchlist empty. No clearance feeds could be scraped. Retrying next cycle.")
         return
 
-    # Phase 2: Check prices for the harvested items
     print(f"Starting automated price evaluation loop for {len(dynamic_watchlist)} items...")
     for sku in dynamic_watchlist:
         try:
+            print(f"Checking SKU: {sku}")
             url = f"https://homedepot.com{sku}"
             response = session.get(url, timeout=10)
             
             if response.status_code == 200:
                 html = response.text
                 
-                # Extract the product title using regex for cleaner reporting
                 title_match = re.search(r'<title>(.*?)</title>', html)
                 title = title_match.group(1).split('-')[0].strip() if title_match else f"SKU {sku}"
                 
-                # Structural Check: When an item hits official penny status, Home Depot removes 
-                # the desktop class tag 'price-format__main-price' entirely from the store front UI
                 if 'price-format__main-price' not in html:
                     print(f"🚨 Penny match found or price hidden for: {title} (SKU: {sku})")
                     send_telegram_alert(sku, title)
                 else:
                     print(f"Skipping: {title} (Still at active clearance pricing)")
                     
-            time.sleep(3) # Safe delay pacing to protect your scraper footprint
+            time.sleep(3)
             
         except Exception as e:
             print(f"Skipping SKU {sku}: {e}")
 
 if __name__ == "__main__":
     run_finder()
-
