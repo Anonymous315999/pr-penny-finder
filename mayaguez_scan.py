@@ -64,7 +64,7 @@ def api_get(endpoint, params):
         },
     )
 
-    with urllib.request.urlopen(req, timeout=90) as response:
+    with urllib.request.urlopen(req, timeout=15) as response:
         data = json.loads(response.read().decode("utf-8"))
 
     if data.get("success") is False:
@@ -97,7 +97,7 @@ def send_telegram(title, item_id, price, url):
         method="POST",
     )
 
-    with urllib.request.urlopen(req, timeout=30) as response:
+    with urllib.request.urlopen(req, timeout=15) as response:
         result = json.loads(response.read().decode("utf-8"))
 
     if not result.get("ok"):
