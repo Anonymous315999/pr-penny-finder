@@ -20,7 +20,7 @@
       "title": "Original watchlist item",
       "url": "",
       "last_price": null,
-      "last_checked": "2026-11-08T19:18:43.694289+00:00"
+      "last_checked": "2026-11-09T20:33:48.371851+00:00"
     },
     "300762143": {
       "title": "Original watchlist item",
@@ -48,31 +48,39 @@
     },
     "311102891": {
       "title": "Original watchlist item",
-      "url": ""
+      "url": "",
+      "last_price": 549.99,
+      "last_checked": "2026-11-09T20:33:26.890080+00:00"
     },
     "303962823": {
       "title": "Original watchlist item",
       "url": "",
       "last_price": 14.99,
-      "last_checked": "2026-11-08T19:16:15.689434+00:00"
+      "last_checked": "2026-11-09T20:32:22.044595+00:00"
     },
     "311003440": {
       "title": "Original watchlist item",
-      "url": ""
+      "url": "",
+      "last_price": 14.99,
+      "last_checked": "2026-11-09T20:33:06.467868+00:00"
     },
     "311004608": {
       "title": "Original watchlist item",
       "url": "",
       "last_price": 14.99,
-      "last_checked": "2026-11-08T19:17:11.169741+00:00"
+      "last_checked": "2026-11-09T20:33:21.251440+00:00"
     },
     "323888516": {
       "title": "Original watchlist item",
-      "url": ""
+      "url": "",
+      "last_price": 27.48,
+      "last_checked": "2026-11-09T20:34:26.690876+00:00"
     },
     "314567890": {
       "title": "Original watchlist item",
-      "url": ""
+      "url": "",
+      "last_price": 6.98,
+      "last_checked": "2026-11-09T20:34:02.397884+00:00"
     },
     "315444552": {
       "title": "Original watchlist item",
@@ -88,15 +96,21 @@
     },
     "320199695": {
       "title": "Original watchlist item",
-      "url": ""
+      "url": "",
+      "last_price": 110.9,
+      "last_checked": "2026-11-09T20:34:13.785933+00:00"
     },
     "320203635": {
       "title": "Original watchlist item",
-      "url": ""
+      "url": "",
+      "last_price": 179.97,
+      "last_checked": "2026-11-09T20:34:17.322979+00:00"
     },
     "323298354": {
       "title": "Original watchlist item",
-      "url": ""
+      "url": "",
+      "last_price": 269,
+      "last_checked": "2026-11-09T20:34:20.697428+00:00"
     },
     "314129069": {
       "title": "Original watchlist item",
@@ -176,7 +190,9 @@
     "316235410": {
       "title": "Small Moving, Shipping, Storage Box with Handles",
       "url": "https://www.homedepot.com/p/The-Home-Depot-Small-Moving-Shipping-Storage-Box-with-Handles-SBX/316235410",
-      "last_seen": "2026-11-08T19:11:08.126924+00:00"
+      "last_seen": "2026-11-08T19:11:08.126924+00:00",
+      "last_price": 1.98,
+      "last_checked": "2026-11-09T20:34:11.497487+00:00"
     },
     "338034784": {
       "title": "5 in. x 6 in. Black Steel Shelf Bracket",
@@ -251,8 +267,146 @@
       "title": "3 Bedroom Moving Bundle - 70 Boxes",
       "url": "https://www.homedepot.com/p/sets/3-Bedroom-Moving-Bundle-70-Boxes/338529509",
       "last_seen": "2026-11-08T19:11:08.126995+00:00"
+    },
+    "302574669": {
+      "title": "Corsica Display White 4 ft. x 6 ft. Area Rug",
+      "url": "https://www.homedepot.com/p/Carpet-Art-Deco-Corsica-Display-White-4-ft-x-6-ft-Area-Rug-RGAC060843/302574669",
+      "last_seen": "2026-11-09T20:32:12.567390+00:00"
+    },
+    "302575271": {
+      "title": "Trattoria Display Multi 4 ft. x 6 ft. Area Rug",
+      "url": "https://www.homedepot.com/p/Carpet-Art-Deco-Trattoria-Display-Multi-4-ft-x-6-ft-Area-Rug-RGAC060781/302575271",
+      "last_seen": "2026-11-09T20:32:12.567426+00:00"
+    },
+    "305287393": {
+      "title": "Capel Timber 6 in. x 24 in. Matte Ceramic Wood Look Floor and Wall Tile (1 sq. ft./Each)",
+      "url": "https://www.homedepot.com/p/TrafficMaster-Capel-Timber-6-in-x-24-in-Matte-Ceramic-Wood-Look-Floor-and-Wall-Tile-1-sq-ft-Each-NHDCAPTIM6X24/305287393",
+      "last_seen": "2026-11-09T20:32:12.567432+00:00",
+      "last_price": 1.17,
+      "last_checked": "2026-11-09T20:32:33.446741+00:00"
+    },
+    "302603437": {
+      "title": "Restore Bright White 2 in. x 6 in. Glazed Ceramic Bullnose Trim Tile (0.1 sq. ft./each)",
+      "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Bullnose-Trim-Tile-0-1-sq-ft-each-RE15S4269CC1P2/302603437",
+      "last_seen": "2026-11-09T20:32:12.567436+00:00"
+    },
+    "304602977": {
+      "title": "Glenwood Fog 7 in. x 20 in. Ceramic Floor and Wall Tile",
+      "url": "https://www.homedepot.com/p/TrafficMaster-Glenwood-Fog-7-in-x-20-in-Ceramic-Floor-and-Wall-Tile-GW09720HD1P2/304602977",
+      "last_seen": "2026-11-09T20:32:12.567439+00:00",
+      "last_price": 1.26,
+      "last_checked": "2026-11-09T20:32:28.715817+00:00"
+    },
+    "302603039": {
+      "title": "Restore Bright White 2 in. x 6 in. Glazed Ceramic Mudd Bullnose Trim Tile (0.1 sq. ft./each)",
+      "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Mudd-Bullnose-Trim-Tile-0-1-sq-ft-each-RE15A4200CC1P2/302603039",
+      "last_seen": "2026-11-09T20:32:12.567443+00:00"
+    },
+    "312481833": {
+      "title": "Nero Marquina 3 in. x 6 in. Glass Subway Wall Tile (0.12 sq. ft./Each)",
+      "url": "https://www.homedepot.com/p/MSI-Nero-Marquina-3-in-x-6-in-Glass-Subway-Wall-Tile-0-12-sq-ft-Each-GL-T-NERMAR36/312481833",
+      "last_seen": "2026-11-09T20:32:12.567446+00:00",
+      "last_price": 1.76,
+      "last_checked": "2026-11-09T20:33:44.006294+00:00"
+    },
+    "302603027": {
+      "title": "Restore Bright White 1 in. x 6 in. Glazed Ceramic Quarter Round Trim Tile (1.8 sq. ft./each)",
+      "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-1-in-x-6-in-Glazed-Ceramic-Quarter-Round-Trim-Tile-1-8-sq-ft-each-RE15A106CC1P2/302603027",
+      "last_seen": "2026-11-09T20:32:12.567455+00:00"
+    },
+    "324670435": {
+      "title": "Vinyl Covebase color Black .080 in Thick x 4 in Wide x 4 ft Length Dryback",
+      "url": "https://www.homedepot.com/p/ROPPE-Vinyl-Covebase-color-Black-080-in-Thick-x-4-in-Wide-x-4-ft-Length-Dryback-H140C5P100/324670435",
+      "last_seen": "2026-11-09T20:32:12.567462+00:00",
+      "last_price": 2.29,
+      "last_checked": "2026-11-09T20:34:31.910693+00:00"
+    },
+    "324811124": {
+      "title": "Color Almond 0.080 in. Thick x 4 in. Wide x 4 ft. Length Dryback Vinyl Covebase",
+      "url": "https://www.homedepot.com/p/ROPPE-Color-Almond-0-080-in-Thick-x-4-in-Wide-x-4-ft-Length-Dryback-Vinyl-Covebase-H140C5P184/324811124",
+      "last_seen": "2026-11-09T20:32:12.567467+00:00"
+    },
+    "202271556": {
+      "title": "4 oz.. Acrylic Latex Wood Filler Pine",
+      "url": "https://www.homedepot.com/p/Lanco-4-oz-Acrylic-Latex-Wood-Filler-Pine-WF827-8/202271556",
+      "last_seen": "2026-11-09T20:32:12.567470+00:00"
+    },
+    "204276152": {
+      "title": "#12 Zinc-Plated Carpet Tacks (17-Pack)",
+      "url": "https://www.homedepot.com/p/12-Zinc-Plated-Carpet-Tacks-17-Pack-801174/204276152",
+      "last_seen": "2026-11-09T20:32:12.567473+00:00"
+    },
+    "204276151": {
+      "title": "#3 x 1.75 oz. Zinc-Plated Carpet Tacks (2-Piece)",
+      "url": "https://www.homedepot.com/p/3-x-1-75-oz-Zinc-Plated-Carpet-Tacks-2-Piece-801144/204276151",
+      "last_seen": "2026-11-09T20:32:12.567476+00:00"
+    },
+    "302602989": {
+      "title": "Restore Bright White 2 in. x 6 in. Glazed Ceramic Chair Rail Trim Tile (0.09 sq. ft./each)",
+      "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Chair-Rail-Trim-Tile-0-09-sq-ft-each-RE1526CRCC1P2/302602989",
+      "last_seen": "2026-11-09T20:32:12.567479+00:00"
+    },
+    "326067509": {
+      "title": "Large 5 in. W Spandex All-Purpose Hydrophilic Sponge",
+      "url": "https://www.homedepot.com/p/Sedco-Large-5-in-W-Spandex-All-Purpose-Hydrophilic-Sponge-SD-873400/326067509",
+      "last_seen": "2026-11-09T20:32:12.567482+00:00"
+    },
+    "204276148": {
+      "title": "#6 Zinc-Plated Carpet Tacks (17-Pack)",
+      "url": "https://www.homedepot.com/p/6-Zinc-Plated-Carpet-Tacks-17-Pack-801154/204276148",
+      "last_seen": "2026-11-09T20:32:12.567484+00:00"
+    },
+    "204276150": {
+      "title": "#14 Black Carpet Tack (17 per Pack)",
+      "url": "https://www.homedepot.com/p/Everbilt-14-Black-Carpet-Tack-17-per-Pack-801184/204276150",
+      "last_seen": "2026-11-09T20:32:12.567488+00:00"
+    },
+    "204276149": {
+      "title": "#10 Black Carpet Tacks (17-Pack)",
+      "url": "https://www.homedepot.com/p/10-Black-Carpet-Tacks-17-Pack-801164/204276149",
+      "last_seen": "2026-11-09T20:32:12.567490+00:00"
+    },
+    "326095603": {
+      "title": "Large Pro Square 6.75 in. W Foam Floor and Wall Tile Grouting Sponge",
+      "url": "https://www.homedepot.com/p/QEP-Large-Pro-Square-6-75-in-W-Foam-Floor-and-Wall-Tile-Grouting-Sponge-70006-18/326095603",
+      "last_seen": "2026-11-09T20:32:12.567493+00:00"
+    },
+    "310585829": {
+      "title": "White 2 in. Hexagon 11 in. x 11 in. x 0.25 in. Matte Porcelain Mesh-Mounted Mosaic Tile (0.81 sq. ft./Each)",
+      "url": "https://www.homedepot.com/p/MSI-White-2-in-Hexagon-11-in-x-11-in-x-0-25-in-Matte-Porcelain-Mesh-Mounted-Mosaic-Tile-0-81-sq-ft-Each-NHDWHI2X2HEX/310585829",
+      "last_seen": "2026-11-09T20:32:12.567496+00:00",
+      "last_price": 3.47,
+      "last_checked": "2026-11-09T20:32:53.966809+00:00"
+    },
+    "314380949": {
+      "title": "Navy Quarter Round Molding 0.60 in. W x 12 in. L Glossy Ceramic Wall Tile (1 lin. ft.)",
+      "url": "https://www.homedepot.com/p/MSI-Navy-Quarter-Round-Molding-0-60-in-W-x-12-in-L-Glossy-Ceramic-Wall-Tile-1-lin-ft-NHDNAVY-6X12QTR/314380949",
+      "last_seen": "2026-11-09T20:32:12.567499+00:00",
+      "last_price": 3.47,
+      "last_checked": "2026-11-09T20:33:56.507432+00:00"
+    },
+    "314380950": {
+      "title": "Domino Gray Quarter Round Molding 0.6 in. x 12 in. Glossy Ceramic Wall Tile (1 lin. ft.)",
+      "url": "https://www.homedepot.com/p/MSI-Domino-Gray-Quarter-Round-Molding-0-6-in-x-12-in-Glossy-Ceramic-Wall-Tile-1-lin-ft-NHDGRAY-6X12QTR/314380950",
+      "last_seen": "2026-11-09T20:32:12.567502+00:00",
+      "last_price": 3.47,
+      "last_checked": "2026-11-09T20:33:58.976172+00:00"
+    },
+    "311331589": {
+      "title": "Thinset Grout Removal Tool with 4-Marked Tips",
+      "url": "https://www.homedepot.com/p/QEP-Thinset-Grout-Removal-Tool-with-4-Marked-Tips-62963/311331589",
+      "last_seen": "2026-11-09T20:32:12.567505+00:00",
+      "last_price": 3.97,
+      "last_checked": "2026-11-09T20:33:29.450658+00:00"
+    },
+    "310863812": {
+      "title": "3/16 in. Hard Tile Spacers for Traditional or Leave-In Installation (200-Pack)",
+      "url": "https://www.homedepot.com/p/QEP-3-16-in-Hard-Tile-Spacers-for-Traditional-or-Leave-In-Installation-200-Pack-10332/310863812",
+      "last_seen": "2026-11-09T20:32:12.567508+00:00",
+      "last_price": 4.25,
+      "last_checked": "2026-11-09T20:32:58.346718+00:00"
     }
   },
   "alerted": [],
-  "cursor": 30
+  "cursor": 60
 }
