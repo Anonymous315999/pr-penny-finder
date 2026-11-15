@@ -58,7 +58,7 @@
       "title": "Original watchlist item",
       "url": "",
       "last_price": 14.99,
-      "last_checked": "2026-11-09T20:32:22.044595+00:00"
+      "last_checked": "2026-11-15T16:56:20.922504+00:00"
     },
     "311003440": {
       "title": "Original watchlist item",
@@ -169,7 +169,9 @@
     "205984569": {
       "title": "INKZALL Blue Fine Point Jobsite Permanent Marker",
       "url": "https://www.homedepot.com/p/Milwaukee-INKZALL-Blue-Fine-Point-Jobsite-Permanent-Marker-48-22-3180/205984569",
-      "last_seen": "2026-11-12T18:00:07.521111+00:00"
+      "last_seen": "2026-11-12T18:00:07.521111+00:00",
+      "last_price": 1.18,
+      "last_checked": "2026-11-15T16:53:11.197363+00:00"
     },
     "204813511": {
       "title": "INKZALL Black Fine Point Jobsite Permanent Marker",
@@ -317,24 +319,30 @@
     "302574669": {
       "title": "Corsica Display White 4 ft. x 6 ft. Area Rug",
       "url": "https://www.homedepot.com/p/Carpet-Art-Deco-Corsica-Display-White-4-ft-x-6-ft-Area-Rug-RGAC060843/302574669",
-      "last_seen": "2026-11-09T20:32:12.567390+00:00"
+      "last_seen": "2026-11-09T20:32:12.567390+00:00",
+      "last_price": 0.1,
+      "last_checked": "2026-11-15T16:55:00.499965+00:00"
     },
     "302575271": {
       "title": "Trattoria Display Multi 4 ft. x 6 ft. Area Rug",
       "url": "https://www.homedepot.com/p/Carpet-Art-Deco-Trattoria-Display-Multi-4-ft-x-6-ft-Area-Rug-RGAC060781/302575271",
-      "last_seen": "2026-11-09T20:32:12.567426+00:00"
+      "last_seen": "2026-11-09T20:32:12.567426+00:00",
+      "last_price": 0.1,
+      "last_checked": "2026-11-15T16:55:09.968611+00:00"
     },
     "305287393": {
       "title": "Capel Timber 6 in. x 24 in. Matte Ceramic Wood Look Floor and Wall Tile (1 sq. ft./Each)",
       "url": "https://www.homedepot.com/p/TrafficMaster-Capel-Timber-6-in-x-24-in-Matte-Ceramic-Wood-Look-Floor-and-Wall-Tile-1-sq-ft-Each-NHDCAPTIM6X24/305287393",
       "last_seen": "2026-11-09T20:32:12.567432+00:00",
       "last_price": 1.17,
-      "last_checked": "2026-11-09T20:32:33.446741+00:00"
+      "last_checked": "2026-11-15T16:56:40.085301+00:00"
     },
     "302603437": {
       "title": "Restore Bright White 2 in. x 6 in. Glazed Ceramic Bullnose Trim Tile (0.1 sq. ft./each)",
       "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Bullnose-Trim-Tile-0-1-sq-ft-each-RE15S4269CC1P2/302603437",
-      "last_seen": "2026-11-09T20:32:12.567436+00:00"
+      "last_seen": "2026-11-09T20:32:12.567436+00:00",
+      "last_price": 1.19,
+      "last_checked": "2026-11-15T16:55:45.079877+00:00"
     },
     "304602977": {
       "title": "Glenwood Fog 7 in. x 20 in. Ceramic Floor and Wall Tile",
@@ -346,7 +354,9 @@
     "302603039": {
       "title": "Restore Bright White 2 in. x 6 in. Glazed Ceramic Mudd Bullnose Trim Tile (0.1 sq. ft./each)",
       "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Mudd-Bullnose-Trim-Tile-0-1-sq-ft-each-RE15A4200CC1P2/302603039",
-      "last_seen": "2026-11-09T20:32:12.567443+00:00"
+      "last_seen": "2026-11-09T20:32:12.567443+00:00",
+      "last_price": 1.39,
+      "last_checked": "2026-11-15T16:55:39.872404+00:00"
     },
     "312481833": {
       "title": "Nero Marquina 3 in. x 6 in. Glass Subway Wall Tile (0.12 sq. ft./Each)",
@@ -398,7 +408,9 @@
     "302602989": {
       "title": "Restore Bright White 2 in. x 6 in. Glazed Ceramic Chair Rail Trim Tile (0.09 sq. ft./each)",
       "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Chair-Rail-Trim-Tile-0-09-sq-ft-each-RE1526CRCC1P2/302602989",
-      "last_seen": "2026-11-09T20:32:12.567479+00:00"
+      "last_seen": "2026-11-09T20:32:12.567479+00:00",
+      "last_price": 2.87,
+      "last_checked": "2026-11-15T16:55:16.403318+00:00"
     },
     "326067509": {
       "title": "Large 5 in. W Spandex All-Purpose Hydrophilic Sponge",
@@ -658,7 +670,9 @@
     "300951230": {
       "title": "Jumbo Round FSC 100% Pencil",
       "url": "https://www.homedepot.com/p/The-Home-Depot-Jumbo-Round-FSC-100-Pencil-10228/300951230",
-      "last_seen": "2026-11-12T18:00:07.521038+00:00"
+      "last_seen": "2026-11-12T18:00:07.521038+00:00",
+      "last_price": 0.42,
+      "last_checked": "2026-11-15T16:54:21.533021+00:00"
     },
     "336572127": {
       "title": "Jumbo Round Carpenter Pencil",
@@ -691,7 +705,9 @@
     "302755763": {
       "title": "3/4 in. Mini Spring Clamp",
       "url": "https://www.homedepot.com/p/Anvil-3-4-in-Mini-Spring-Clamp-99693/302755763",
-      "last_seen": "2026-11-12T18:00:07.521060+00:00"
+      "last_seen": "2026-11-12T18:00:07.521060+00:00",
+      "last_price": 0.72,
+      "last_checked": "2026-11-15T16:55:48.689690+00:00"
     },
     "313895890": {
       "title": "Black Fine Point Permanent Workshop Marker",
@@ -722,7 +738,9 @@
     "206377350": {
       "title": "Coil Spring for 5 in. Long Nose and Diagonal Cutting Pliers",
       "url": "https://www.homedepot.com/p/Klein-Tools-Coil-Spring-for-5-in-Long-Nose-and-Diagonal-Cutting-Pliers-571/206377350",
-      "last_seen": "2026-11-11T17:47:26.404772+00:00"
+      "last_seen": "2026-11-11T17:47:26.404772+00:00",
+      "last_price": 0.99,
+      "last_checked": "2026-11-15T16:53:32.673079+00:00"
     },
     "318910290": {
       "title": "Coil Spring for Pliers",
@@ -732,17 +750,23 @@
     "305700662": {
       "title": "#5-40 Carbon Steel Taper Hand Tap",
       "url": "https://www.homedepot.com/p/Drill-America-5-40-Carbon-Steel-Taper-Hand-Tap-DWTT5-40/305700662",
-      "last_seen": "2026-11-12T18:00:07.521094+00:00"
+      "last_seen": "2026-11-12T18:00:07.521094+00:00",
+      "last_price": 1.04,
+      "last_checked": "2026-11-15T16:56:45.416024+00:00"
     },
     "305700664": {
       "title": "#4-36 Carbon Steel Taper Tap (1-Piece)",
       "url": "https://www.homedepot.com/p/Drill-America-4-36-Carbon-Steel-Taper-Tap-1-Piece-DWTT4-36/305700664",
-      "last_seen": "2026-11-12T18:00:07.521101+00:00"
+      "last_seen": "2026-11-12T18:00:07.521101+00:00",
+      "last_price": 1.11,
+      "last_checked": "2026-11-15T16:56:54.012904+00:00"
     },
     "302755767": {
       "title": "1 in. Spring Clamp",
       "url": "https://www.homedepot.com/p/Anvil-1-in-Spring-Clamp-99692/302755767",
-      "last_seen": "2026-11-12T18:00:07.521104+00:00"
+      "last_seen": "2026-11-12T18:00:07.521104+00:00",
+      "last_price": 1.18,
+      "last_checked": "2026-11-15T16:56:11.429382+00:00"
     },
     "302755764": {
       "title": "2 in. Spring Clamp",
@@ -752,7 +776,9 @@
     "206377354": {
       "title": "Coil Spring for 201-7CST, D201-7CST, D2000-7CST",
       "url": "https://www.homedepot.com/p/Klein-Tools-Coil-Spring-for-201-7CST-D201-7CST-D2000-7CST-640/206377354",
-      "last_seen": "2026-11-12T18:00:07.521121+00:00"
+      "last_seen": "2026-11-12T18:00:07.521121+00:00",
+      "last_price": 1.21,
+      "last_checked": "2026-11-15T16:53:58.148476+00:00"
     },
     "202796530": {
       "title": "3/8 in. Drive 12 Point 11/32 in. Chrome Socket",
@@ -764,7 +790,9 @@
     "305700665": {
       "title": "#3-48 Carbon Steel Taper Hand Tap",
       "url": "https://www.homedepot.com/p/Drill-America-3-48-Carbon-Steel-Taper-Hand-Tap-DWTT3-48/305700665",
-      "last_seen": "2026-11-12T18:00:07.521127+00:00"
+      "last_seen": "2026-11-12T18:00:07.521127+00:00",
+      "last_price": 1.24,
+      "last_checked": "2026-11-15T16:56:59.541408+00:00"
     },
     "339421312": {
       "title": "26-Piece 1/4 in. Drive Ratchet and Socket Set with Black Fine Point Permanent Workshop Marker",
@@ -829,7 +857,9 @@
     "303513206": {
       "title": "Display 26-Watt Chrome Integrated LED Pendant with Clear Crystals",
       "url": "https://www.homedepot.com/p/Alsy-Display-26-Watt-Chrome-Integrated-LED-Pendant-with-Clear-Crystals-D20748-000/303513206",
-      "last_seen": "2026-11-13T17:35:02.074824+00:00"
+      "last_seen": "2026-11-13T17:35:02.074824+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:56:18.072789+00:00"
     },
     "205810839": {
       "title": "Display 3-Light Satin Nickel Vanity Light",
@@ -848,22 +878,30 @@
     "300049412": {
       "title": "Dusk to Dawn Integrated Outdoor LED Wall Pack",
       "url": "https://www.homedepot.com/p/Lithonia-Lighting-Dusk-to-Dawn-Integrated-Outdoor-LED-Wall-Pack-OVWP-LED-40K-120-PE-BZ-DISPLAY/300049412",
-      "last_seen": "2026-11-13T17:35:02.074832+00:00"
+      "last_seen": "2026-11-13T17:35:02.074832+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:54:03.698757+00:00"
     },
     "300349826": {
       "title": "18-Watt White Integrated LED Ceiling Flush Mount",
       "url": "https://www.homedepot.com/p/Hampton-Bay-18-Watt-White-Integrated-LED-Ceiling-Flush-Mount-JAL8011L-WHT-D/300349826",
-      "last_seen": "2026-11-13T17:35:02.074834+00:00"
+      "last_seen": "2026-11-13T17:35:02.074834+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:54:08.160753+00:00"
     },
     "301336816": {
       "title": "4-Light Chrome Semi-Flushmount Light",
       "url": "https://www.homedepot.com/p/Easylite-4-Light-Chrome-Semi-Flushmount-Light-29436-DIS/301336816",
-      "last_seen": "2026-11-13T17:35:02.074836+00:00"
+      "last_seen": "2026-11-13T17:35:02.074836+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:54:28.254124+00:00"
     },
     "301646742": {
       "title": "3 ft. 4-Light Brushed Nickel Integrated LED Industrial Fixed Track Lighting Kit Bar",
       "url": "https://www.homedepot.com/p/Alsy-3-ft-4-Light-Brushed-Nickel-Integrated-LED-Industrial-Fixed-Track-Lighting-Kit-Bar-D20555-000/301646742",
-      "last_seen": "2026-11-13T17:35:02.074838+00:00"
+      "last_seen": "2026-11-13T17:35:02.074838+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:54:38.734401+00:00"
     },
     "205810841": {
       "title": "DISPLAY 1-Light Chrome Convertible Semi-Flushmount Convertible Pendant with Opal Glass",
@@ -910,19 +948,25 @@
     "301646748": {
       "title": "3 ft. 4-Light Chrome Fixed Track Lighting Kit Bar",
       "url": "https://www.homedepot.com/p/Alsy-3-ft-4-Light-Chrome-Fixed-Track-Lighting-Kit-Bar-D20556-000/301646748",
-      "last_seen": "2026-11-13T17:35:02.074854+00:00"
+      "last_seen": "2026-11-13T17:35:02.074854+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:54:51.481122+00:00"
     },
     "206303820": {
       "title": "Maria Theresa 6-Light Chrome and Red Acrylic Chandelier",
       "url": "https://www.homedepot.com/p/Hampton-Bay-Maria-Theresa-6-Light-Chrome-and-Red-Acrylic-Chandelier-C873RD06/206303820",
-      "last_seen": "2026-11-13T17:35:02.074856+00:00"
+      "last_seen": "2026-11-13T17:35:02.074856+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:53:21.606315+00:00"
     },
     "301646735": {
       "title": "4 ft. 5-Light Brushed Nickel Integrated LED Fixed Track Lighting Kit Bar",
       "url": "https://www.homedepot.com/p/Alsy-4-ft-5-Light-Brushed-Nickel-Integrated-LED-Fixed-Track-Lighting-Kit-Bar-D20554-000/301646735",
-      "last_seen": "2026-11-13T17:35:02.074858+00:00"
+      "last_seen": "2026-11-13T17:35:02.074858+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-15T16:54:32.238576+00:00"
     }
   },
   "alerted": [],
-  "cursor": 60
+  "cursor": 90
 }
