@@ -58,7 +58,7 @@
       "title": "Original watchlist item",
       "url": "",
       "last_price": 14.99,
-      "last_checked": "2026-11-16T20:09:55.296421+00:00"
+      "last_checked": "2026-11-24T20:35:23.501799+00:00"
     },
     "311003440": {
       "title": "Original watchlist item",
@@ -323,14 +323,14 @@
       "url": "https://www.homedepot.com/p/Carpet-Art-Deco-Corsica-Display-White-4-ft-x-6-ft-Area-Rug-RGAC060843/302574669",
       "last_seen": "2026-11-19T18:55:00.080611+00:00",
       "last_price": 0.1,
-      "last_checked": "2026-11-23T21:58:45.303485+00:00"
+      "last_checked": "2026-11-24T20:34:21.179747+00:00"
     },
     "302575271": {
       "title": "Trattoria Display Multi 4 ft. x 6 ft. Area Rug",
       "url": "https://www.homedepot.com/p/Carpet-Art-Deco-Trattoria-Display-Multi-4-ft-x-6-ft-Area-Rug-RGAC060781/302575271",
       "last_seen": "2026-11-19T18:55:00.080648+00:00",
       "last_price": 0.1,
-      "last_checked": "2026-11-23T21:58:48.925868+00:00"
+      "last_checked": "2026-11-24T20:34:26.277086+00:00"
     },
     "305287393": {
       "title": "Capel Timber 6 in. x 24 in. Matte Ceramic Wood Look Floor and Wall Tile (1 sq. ft./Each)",
@@ -342,7 +342,7 @@
       "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Bullnose-Trim-Tile-0-1-sq-ft-each-RE15S4269CC1P2/302603437",
       "last_seen": "2026-11-19T18:55:00.080655+00:00",
       "last_price": 1.19,
-      "last_checked": "2026-11-23T21:59:03.241105+00:00"
+      "last_checked": "2026-11-24T20:34:47.277861+00:00"
     },
     "304602977": {
       "title": "Glenwood Fog 7 in. x 20 in. Ceramic Floor and Wall Tile",
@@ -354,7 +354,7 @@
       "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Mudd-Bullnose-Trim-Tile-0-1-sq-ft-each-RE15A4200CC1P2/302603039",
       "last_seen": "2026-11-19T18:55:00.080661+00:00",
       "last_price": 1.39,
-      "last_checked": "2026-11-23T21:58:59.529112+00:00"
+      "last_checked": "2026-11-24T20:34:40.488078+00:00"
     },
     "312481833": {
       "title": "Nero Marquina 3 in. x 6 in. Glass Subway Wall Tile (0.12 sq. ft./Each)",
@@ -366,7 +366,7 @@
       "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-1-in-x-6-in-Glazed-Ceramic-Quarter-Round-Trim-Tile-1-8-sq-ft-each-RE15A106CC1P2/302603027",
       "last_seen": "2026-11-19T18:55:00.080669+00:00",
       "last_price": 1.77,
-      "last_checked": "2026-11-23T21:58:57.055041+00:00"
+      "last_checked": "2026-11-24T20:34:34.917023+00:00"
     },
     "324670435": {
       "title": "Vinyl Covebase color Black .080 in Thick x 4 in Wide x 4 ft Length Dryback",
@@ -404,7 +404,7 @@
       "url": "https://www.homedepot.com/p/Daltile-Restore-Bright-White-2-in-x-6-in-Glazed-Ceramic-Chair-Rail-Trim-Tile-0-09-sq-ft-each-RE1526CRCC1P2/302602989",
       "last_seen": "2026-11-19T18:55:00.080687+00:00",
       "last_price": 2.87,
-      "last_checked": "2026-11-23T21:58:52.456933+00:00"
+      "last_checked": "2026-11-24T20:34:31.570744+00:00"
     },
     "326067509": {
       "title": "Large 5 in. W Spandex All-Purpose Hydrophilic Sponge",
@@ -610,7 +610,7 @@
       "url": "https://www.homedepot.com/p/The-Home-Depot-Jumbo-Round-FSC-100-Pencil-10228/300951230",
       "last_seen": "2026-11-21T17:13:09.177571+00:00",
       "last_price": 0.42,
-      "last_checked": "2026-11-23T21:58:21.944625+00:00"
+      "last_checked": "2026-11-24T20:34:00.368093+00:00"
     },
     "336572127": {
       "title": "Jumbo Round Carpenter Pencil",
@@ -637,7 +637,7 @@
       "url": "https://www.homedepot.com/p/Anvil-3-4-in-Mini-Spring-Clamp-99693/302755763",
       "last_seen": "2026-11-21T17:13:09.177588+00:00",
       "last_price": 0.72,
-      "last_checked": "2026-11-23T21:59:12.446444+00:00"
+      "last_checked": "2026-11-24T20:34:58.521428+00:00"
     },
     "313895890": {
       "title": "Black Fine Point Permanent Workshop Marker",
@@ -684,14 +684,16 @@
     "302755767": {
       "title": "1 in. Spring Clamp",
       "url": "https://www.homedepot.com/p/Anvil-1-in-Spring-Clamp-99692/302755767",
-      "last_seen": "2026-11-21T17:13:09.177620+00:00"
+      "last_seen": "2026-11-21T17:13:09.177620+00:00",
+      "last_price": 1.18,
+      "last_checked": "2026-11-24T20:35:05.790282+00:00"
     },
     "302755764": {
       "title": "2 in. Spring Clamp",
       "url": "https://www.homedepot.com/p/Anvil-2-in-Spring-Clamp-99691/302755764",
       "last_seen": "2026-11-21T17:13:09.177632+00:00",
       "last_price": 1.19,
-      "last_checked": "2026-11-23T21:59:16.108111+00:00"
+      "last_checked": "2026-11-24T20:35:01.701825+00:00"
     },
     "206377354": {
       "title": "Coil Spring for 201-7CST, D201-7CST, D2000-7CST",
@@ -771,7 +773,9 @@
     "303513206": {
       "title": "Display 26-Watt Chrome Integrated LED Pendant with Clear Crystals",
       "url": "https://www.homedepot.com/p/Alsy-Display-26-Watt-Chrome-Integrated-LED-Pendant-with-Clear-Crystals-D20748-000/303513206",
-      "last_seen": "2026-11-22T17:41:50.869379+00:00"
+      "last_seen": "2026-11-22T17:41:50.869379+00:00",
+      "last_price": null,
+      "last_checked": "2026-11-24T20:35:19.534081+00:00"
     },
     "205810839": {
       "title": "Display 3-Light Satin Nickel Vanity Light",
@@ -804,14 +808,14 @@
       "url": "https://www.homedepot.com/p/Easylite-4-Light-Chrome-Semi-Flushmount-Light-29436-DIS/301336816",
       "last_seen": "2026-11-22T17:41:50.869389+00:00",
       "last_price": null,
-      "last_checked": "2026-11-23T21:58:27.435687+00:00"
+      "last_checked": "2026-11-24T20:34:02.649883+00:00"
     },
     "301646742": {
       "title": "3 ft. 4-Light Brushed Nickel Integrated LED Industrial Fixed Track Lighting Kit Bar",
       "url": "https://www.homedepot.com/p/Alsy-3-ft-4-Light-Brushed-Nickel-Integrated-LED-Industrial-Fixed-Track-Lighting-Kit-Bar-D20555-000/301646742",
       "last_seen": "2026-11-22T17:41:50.869391+00:00",
       "last_price": null,
-      "last_checked": "2026-11-23T21:58:35.154530+00:00"
+      "last_checked": "2026-11-24T20:34:10.577428+00:00"
     },
     "205810841": {
       "title": "DISPLAY 1-Light Chrome Convertible Semi-Flushmount Convertible Pendant with Opal Glass",
@@ -854,7 +858,7 @@
       "url": "https://www.homedepot.com/p/Alsy-3-ft-4-Light-Chrome-Fixed-Track-Lighting-Kit-Bar-D20556-000/301646748",
       "last_seen": "2026-11-22T17:41:50.869404+00:00",
       "last_price": null,
-      "last_checked": "2026-11-23T21:58:37.847057+00:00"
+      "last_checked": "2026-11-24T20:34:13.363509+00:00"
     },
     "206303820": {
       "title": "Maria Theresa 6-Light Chrome and Red Acrylic Chandelier",
@@ -868,7 +872,7 @@
       "url": "https://www.homedepot.com/p/Alsy-4-ft-5-Light-Brushed-Nickel-Integrated-LED-Fixed-Track-Lighting-Kit-Bar-D20554-000/301646735",
       "last_seen": "2026-11-22T17:41:50.869407+00:00",
       "last_price": null,
-      "last_checked": "2026-11-23T21:58:32.570430+00:00"
+      "last_checked": "2026-11-24T20:34:04.817291+00:00"
     },
     "204647886": {
       "title": "1/4 in.-20 Zinc Plated Hex Nut",
@@ -1029,7 +1033,7 @@
       "url": "https://www.homedepot.com/p/Chrome-Ratchet-Tie-Down-Strap-16-ft-x-1-25-in-1-000-lbs-2-Pack-47203/303480208",
       "last_seen": "2026-11-16T20:07:48.657603+00:00",
       "last_price": 22,
-      "last_checked": "2026-11-16T20:09:46.485097+00:00"
+      "last_checked": "2026-11-24T20:35:15.753331+00:00"
     },
     "308035566": {
       "title": "Key Kiosk Bag",
@@ -1078,14 +1082,14 @@
       "url": "https://www.homedepot.com/p/American-Seed-Tomato-Roma-AM-Seed-6034/300512467",
       "last_seen": "2026-11-17T19:00:10.583337+00:00",
       "last_price": 0.5,
-      "last_checked": "2026-11-23T21:57:54.168273+00:00"
+      "last_checked": "2026-11-24T20:33:28.188418+00:00"
     },
     "300512474": {
       "title": "Turnip Purple Top White Globe AM Seed",
       "url": "https://www.homedepot.com/p/American-Seed-Turnip-Purple-Top-White-Globe-AM-Seed-6035/300512474",
       "last_seen": "2026-11-17T19:00:10.583330+00:00",
       "last_price": 0.5,
-      "last_checked": "2026-11-23T21:57:56.756787+00:00"
+      "last_checked": "2026-11-24T20:33:32.868960+00:00"
     },
     "300512195": {
       "title": "Sunflower Teddy Bear AM Seed",
@@ -1120,7 +1124,7 @@
       "url": "https://www.homedepot.com/p/American-Seed-Tomato-Homestead-AM-Seed-6033/300512458",
       "last_seen": "2026-11-17T19:00:10.583359+00:00",
       "last_price": 0.5,
-      "last_checked": "2026-11-23T21:57:47.752958+00:00"
+      "last_checked": "2026-11-24T20:33:22.248853+00:00"
     },
     "300512167": {
       "title": "Sunflower Evening Sun",
@@ -1162,7 +1166,7 @@
       "url": "https://www.homedepot.com/p/American-Seed-American-Premium-Flower-Seed-6037/300512488",
       "last_seen": "2026-11-17T19:00:10.583363+00:00",
       "last_price": 0.5,
-      "last_checked": "2026-11-23T21:57:59.174412+00:00"
+      "last_checked": "2026-11-24T20:33:35.117305+00:00"
     },
     "308486005": {
       "title": "Watermelon Charleston Gray AM Seed",
@@ -1197,7 +1201,7 @@
       "url": "https://www.homedepot.com/p/60-in-Rudolph-3D-LED-Bumble-20340-THD/301695234",
       "last_seen": "2026-11-17T19:00:10.583375+00:00",
       "last_price": null,
-      "last_checked": "2026-11-23T21:58:40.501803+00:00"
+      "last_checked": "2026-11-24T20:34:15.633003+00:00"
     },
     "321300822": {
       "title": "RDC Spring 22 Fountain Carton G",
@@ -1237,136 +1241,260 @@
     "312695238": {
       "title": "IDMTEST-PRO PLUMBER TRACKING SKU",
       "url": "https://www.homedepot.com/p/Pro-Test-Item-IDMTEST-PRO-PLUMBER-TRACKING-SKU-IDMPMTEST-01202020-PRO/312695238",
-      "last_seen": "2026-11-23T21:57:05.222819+00:00"
+      "last_seen": "2026-11-24T20:33:13.777719+00:00"
     },
     "335786156": {
       "title": "1-1/2 in. x 1-1/2 in. Rubber Square Cut Slip Joint Washer, 100 Pieces",
       "url": "https://www.homedepot.com/p/JONES-STEPHENS-1-1-2-in-x-1-1-2-in-Rubber-Square-Cut-Slip-Joint-Washer-100-Pieces-T79150/335786156",
-      "last_seen": "2026-11-23T21:57:07.474878+00:00"
+      "last_seen": "2026-11-24T20:33:13.777757+00:00"
     },
     "335786067": {
       "title": "1-1/4\" x 1-1/4\" Rubber Square Cut Slip Joint Washer, 100 pcs.",
       "url": "https://www.homedepot.com/p/JONES-STEPHENS-1-1-4-x-1-1-4-Rubber-Square-Cut-Slip-Joint-Washer-100-pcs-T79125/335786067",
-      "last_seen": "2026-11-23T21:57:07.474903+00:00"
+      "last_seen": "2026-11-24T20:33:13.777761+00:00"
     },
     "302640616": {
       "title": "19/64 in. O.D. x 1.57 in. Exposed Screw Assist Bar Wood Screw in Chrome (6 per pack)",
       "url": "https://www.homedepot.com/p/Glacier-Bay-19-64-in-O-D-x-1-57-in-Exposed-Screw-Assist-Bar-Wood-Screw-in-Chrome-6-per-pack-RP90148/302640616",
-      "last_seen": "2026-11-23T21:57:07.474909+00:00",
+      "last_seen": "2026-11-24T20:33:13.777764+00:00",
       "last_price": 0.39,
-      "last_checked": "2026-11-23T21:59:08.957740+00:00"
+      "last_checked": "2026-11-24T20:34:51.096658+00:00"
     },
     "304568808": {
       "title": "5 in. Plastic Spacer Washer",
       "url": "https://www.homedepot.com/p/Zurn-5-in-Plastic-Spacer-Washer-59436001/304568808",
-      "last_seen": "2026-11-23T21:57:07.474914+00:00"
+      "last_seen": "2026-11-24T20:33:13.777766+00:00"
     },
     "313729788": {
       "title": "Handle Gasket for Exposed Manual Flush Valve",
       "url": "https://www.homedepot.com/p/Zurn-Handle-Gasket-for-Exposed-Manual-Flush-Valve-P6000-M10/313729788",
-      "last_seen": "2026-11-23T21:57:07.474919+00:00"
+      "last_seen": "2026-11-24T20:33:13.777769+00:00"
     },
     "303434702": {
       "title": "1-1/4 in. Copper 2-Hole Pipe Hanger Strap",
       "url": "https://www.homedepot.com/p/Oatey-1-1-4-in-Copper-2-Hole-Pipe-Hanger-Strap-33577/303434702",
-      "last_seen": "2026-11-23T21:57:07.474927+00:00"
+      "last_seen": "2026-11-24T20:33:13.777771+00:00",
+      "last_price": 0.51,
+      "last_checked": "2026-11-24T20:35:08.883762+00:00"
     },
     "300813901": {
       "title": "1/2 in. Barb Insert Blue Twister Polypropylene Coupling Fitting",
       "url": "https://www.homedepot.com/p/Apollo-1-2-in-Barb-Insert-Blue-Twister-Polypropylene-Coupling-Fitting-ABTC12/300813901",
-      "last_seen": "2026-11-23T21:57:07.474933+00:00",
+      "last_seen": "2026-11-24T20:33:13.777777+00:00",
       "last_price": 0.52,
-      "last_checked": "2026-11-23T21:58:08.369711+00:00"
+      "last_checked": "2026-11-24T20:33:44.498376+00:00"
     },
     "303434709": {
       "title": "1 in. Copper 2-Hole Pipe Hanger Strap",
       "url": "https://www.homedepot.com/p/Oatey-1-in-Copper-2-Hole-Pipe-Hanger-Strap-33518/303434709",
-      "last_seen": "2026-11-23T21:57:07.474940+00:00"
+      "last_seen": "2026-11-24T20:33:13.777782+00:00",
+      "last_price": 0.52,
+      "last_checked": "2026-11-24T20:35:11.900674+00:00"
     },
     "335786143": {
       "title": "2 in. x 2 in. Rubber Square Cut Slip Joint Washer, 100 Pieces",
       "url": "https://www.homedepot.com/p/JONES-STEPHENS-2-in-x-2-in-Rubber-Square-Cut-Slip-Joint-Washer-100-Pieces-T79200/335786143",
-      "last_seen": "2026-11-23T21:57:07.474945+00:00"
+      "last_seen": "2026-11-24T20:33:13.777785+00:00"
     },
     "300823610": {
       "title": "1/2 in. Barb Insert Blue Twister Polypropylene x MNPT Adapter Fitting",
       "url": "https://www.homedepot.com/p/Apollo-1-2-in-Barb-Insert-Blue-Twister-Polypropylene-x-MNPT-Adapter-Fitting-ABTMA12/300823610",
-      "last_seen": "2026-11-23T21:57:07.474948+00:00",
+      "last_seen": "2026-11-24T20:33:13.777788+00:00",
       "last_price": 0.56,
-      "last_checked": "2026-11-23T21:58:17.125170+00:00"
+      "last_checked": "2026-11-24T20:33:55.782968+00:00"
     },
     "100346972": {
       "title": "3/4 in. x 1/2 in. CPVC-CTS Slip x Slip Reducer Coupling Fitting",
       "url": "https://www.homedepot.com/p/NIBCO-3-4-in-x-1-2-in-CPVC-CTS-Slip-x-Slip-Reducer-Coupling-Fitting-C4701R3412/100346972",
-      "last_seen": "2026-11-23T21:57:07.474952+00:00"
+      "last_seen": "2026-11-24T20:33:13.777790+00:00"
     },
     "100027843": {
       "title": "1/2 in. CPVC-CTS Slip x Slip Coupling Fitting",
       "url": "https://www.homedepot.com/p/1-2-in-CPVC-CTS-Slip-x-Slip-Coupling-Fitting-C470112/100027843",
-      "last_seen": "2026-11-23T21:57:07.474956+00:00"
+      "last_seen": "2026-11-24T20:33:13.777792+00:00"
     },
     "100345137": {
       "title": "1/2 in. CPVC-CTS 90-Degree Spigot x Slip Street Elbow Fitting",
       "url": "https://www.homedepot.com/p/NIBCO-1-2-in-CPVC-CTS-90-Degree-Spigot-x-Slip-Street-Elbow-Fitting-C4707212/100345137",
-      "last_seen": "2026-11-23T21:57:07.474960+00:00"
+      "last_seen": "2026-11-24T20:33:13.777794+00:00"
     },
     "335704145": {
       "title": "2.50 in. x 2.50 in. Steel Flange",
       "url": "https://www.homedepot.com/p/JONES-STEPHENS-2-50-in-x-2-50-in-Steel-Flange-E01050/335704145",
-      "last_seen": "2026-11-23T21:57:07.474964+00:00"
+      "last_seen": "2026-11-24T20:33:13.777797+00:00"
     },
     "316930328": {
       "title": "1/2 in. x Close Galvanized Steel Nipple",
       "url": "https://www.homedepot.com/p/STZ-1-2-in-x-Close-Galvanized-Steel-Nipple-PDG-N12XCL/316930328",
-      "last_seen": "2026-11-23T21:57:07.474968+00:00"
+      "last_seen": "2026-11-24T20:33:13.777799+00:00"
     },
     "300823605": {
       "title": "3/4 in. Barb Insert Blue Twister Polypropylene x MNPT Adapter Fitting",
       "url": "https://www.homedepot.com/p/Apollo-3-4-in-Barb-Insert-Blue-Twister-Polypropylene-x-MNPT-Adapter-Fitting-ABTMA34/300823605",
-      "last_seen": "2026-11-23T21:57:07.474972+00:00",
+      "last_seen": "2026-11-24T20:33:13.777801+00:00",
       "last_price": 0.64,
-      "last_checked": "2026-11-23T21:58:13.419520+00:00"
+      "last_checked": "2026-11-24T20:33:47.712879+00:00"
     },
     "300309823": {
       "title": "Fiber Washer for Flush Valves",
       "url": "https://www.homedepot.com/p/Zurn-Fiber-Washer-for-Flush-Valves-P6000-H26/300309823",
-      "last_seen": "2026-11-23T21:57:07.474976+00:00"
+      "last_seen": "2026-11-24T20:33:13.777803+00:00"
     },
     "100015035": {
       "title": "1/2 in. CPVC-CTS Slip Cap Fitting",
       "url": "https://www.homedepot.com/p/NIBCO-1-2-in-CPVC-CTS-Slip-Cap-Fitting-C471712/100015035",
-      "last_seen": "2026-11-23T21:57:07.474980+00:00"
+      "last_seen": "2026-11-24T20:33:13.777805+00:00"
     },
     "100137732": {
       "title": "2 in. ABS Pipe Test Cap with Knockout",
       "url": "https://www.homedepot.com/p/Oatey-2-in-ABS-Pipe-Test-Cap-with-Knockout-39101D/100137732",
-      "last_seen": "2026-11-23T21:57:07.474989+00:00"
+      "last_seen": "2026-11-24T20:33:13.777807+00:00"
     },
     "203811383": {
       "title": "3/4 in. PVC Schedule 40 S x S Coupling",
       "url": "https://www.homedepot.com/p/Charlotte-Pipe-3-4-in-PVC-Schedule-40-S-x-S-Coupling-PVC021000800HD/203811383",
-      "last_seen": "2026-11-23T21:57:07.474993+00:00"
+      "last_seen": "2026-11-24T20:33:13.777809+00:00"
     },
     "100132303": {
       "title": "1-1/2 in. ABS Pipe Test Cap with Knockout",
       "url": "https://www.homedepot.com/p/Oatey-1-1-2-in-ABS-Pipe-Test-Cap-with-Knockout-39100D/100132303",
-      "last_seen": "2026-11-23T21:57:07.474997+00:00"
+      "last_seen": "2026-11-24T20:33:13.777811+00:00"
     },
     "300700342": {
       "title": "1/2 in. Blu-Lock 3X x 1/2 in. MPT Elbow",
       "url": "https://www.homedepot.com/p/Orbit-1-2-in-Blu-Lock-3X-x-1-2-in-MPT-Elbow-31970H/300700342",
-      "last_seen": "2026-11-23T21:57:07.475001+00:00",
+      "last_seen": "2026-11-24T20:33:13.777813+00:00",
       "last_price": 0.77,
-      "last_checked": "2026-11-23T21:58:02.737541+00:00"
+      "last_checked": "2026-11-24T20:33:38.561415+00:00"
     },
     "100346346": {
       "title": "3/4 in. x 1/2 in. CPVC-CTS 90° Slip x Slip Reducing Elbow Fitting",
       "url": "https://www.homedepot.com/p/NIBCO-3-4-in-x-1-2-in-CPVC-CTS-90-Slip-x-Slip-Reducing-Elbow-Fitting-U4707R3412/100346346",
-      "last_seen": "2026-11-23T21:57:07.475005+00:00"
+      "last_seen": "2026-11-24T20:33:13.777815+00:00"
+    },
+    "204725217": {
+      "title": "(By-the-Foot) 20/2 Twisted CU Bell Wire",
+      "url": "https://www.homedepot.com/p/Southwire-By-the-Foot-20-2-Twisted-CU-Bell-Wire-56750099/204725217",
+      "last_seen": "2026-11-24T20:33:18.486289+00:00"
+    },
+    "202043499": {
+      "title": "1/2 in. Schedule 40-Standard Center Stop PVC Coupling",
+      "url": "https://www.homedepot.com/p/Cantex-1-2-in-Schedule-40-Standard-Center-Stop-PVC-Coupling-R6141623/202043499",
+      "last_seen": "2026-11-24T20:33:18.486317+00:00"
+    },
+    "100404043": {
+      "title": "1/2 in. Electrical PVC Female Adapter (E942D-30-HD)",
+      "url": "https://www.homedepot.com/p/Carlon-1-2-in-Electrical-PVC-Female-Adapter-E942D-30-HD-E942D-30-HD/100404043",
+      "last_seen": "2026-11-24T20:33:18.486321+00:00"
+    },
+    "100404040": {
+      "title": "3/4 in. Electrical PVC Standard Coupling (E940E-100-HD)",
+      "url": "https://www.homedepot.com/p/Carlon-3-4-in-Electrical-PVC-Standard-Coupling-E940E-100-HD-E940E-100-HD/100404040",
+      "last_seen": "2026-11-24T20:33:18.486324+00:00"
+    },
+    "100404041": {
+      "title": "1/2 in. Electrical PVC Male Adapter (E943D-125-HD)",
+      "url": "https://www.homedepot.com/p/Carlon-1-2-in-Electrical-PVC-Male-Adapter-E943D-125-HD-E943D-125-HD/100404041",
+      "last_seen": "2026-11-24T20:33:18.486326+00:00"
+    },
+    "202043513": {
+      "title": ".5 in. PVC Female Adapter Conduit Fitting for Cantex PVC Conduits",
+      "url": "https://www.homedepot.com/p/Cantex-5-in-PVC-Female-Adapter-Conduit-Fitting-for-Cantex-PVC-Conduits-R5140043/202043513",
+      "last_seen": "2026-11-24T20:33:18.486328+00:00"
+    },
+    "202303522": {
+      "title": "3/4 in. Coupling",
+      "url": "https://www.homedepot.com/p/Cantex-3-4-in-Coupling-R6141624/202303522",
+      "last_seen": "2026-11-24T20:33:18.486330+00:00"
+    },
+    "100404042": {
+      "title": "3/4 in. Electrical PVC Male Adapter (E943E-125-HD)",
+      "url": "https://www.homedepot.com/p/Carlon-3-4-in-Electrical-PVC-Male-Adapter-E943E-125-HD-E943E-125-HD/100404042",
+      "last_seen": "2026-11-24T20:33:18.486333+00:00"
+    },
+    "100129144": {
+      "title": "1 in. Rigid 1-Hole Conduit Strap",
+      "url": "https://www.homedepot.com/p/Halex-1-in-Rigid-1-Hole-Conduit-Strap-96113/100129144",
+      "last_seen": "2026-11-24T20:33:18.486335+00:00"
+    },
+    "100162984": {
+      "title": "1/2 in. Electrical Metallic Tube (EMT) Insulating Bushing (4-Pack)",
+      "url": "https://www.homedepot.com/p/1-2-in-Electrical-Metallic-Tube-EMT-Insulating-Bushing-4-Pack-27501/100162984",
+      "last_seen": "2026-11-24T20:33:18.486337+00:00"
+    },
+    "100404044": {
+      "title": "3/4 in. Electrical PVC Female Adapter (E942E-20-HD)",
+      "url": "https://www.homedepot.com/p/Carlon-3-4-in-Electrical-PVC-Female-Adapter-E942E-20-HD-E942E-20-HD/100404044",
+      "last_seen": "2026-11-24T20:33:18.486339+00:00"
+    },
+    "202043509": {
+      "title": ". 5 in. PVC Male Terminal Adapter Conduit Fitting for PVC Conduits",
+      "url": "https://www.homedepot.com/p/Cantex-5-in-PVC-Male-Terminal-Adapter-Conduit-Fitting-for-PVC-Conduits-R5140103/202043509",
+      "last_seen": "2026-11-24T20:33:18.486342+00:00"
+    },
+    "100158247": {
+      "title": "1-1/2 in. - 1 in. Rigid Conduit-Reducing Washer",
+      "url": "https://www.homedepot.com/p/Halex-1-1-2-in-1-in-Rigid-Conduit-Reducing-Washer-68510/100158247",
+      "last_seen": "2026-11-24T20:33:18.486344+00:00"
+    },
+    "202043511": {
+      "title": ".75 in. PVC Male Terminal Adapter Conduit Fitting for Cantex PVC Conduits",
+      "url": "https://www.homedepot.com/p/Cantex-75-in-PVC-Male-Terminal-Adapter-Conduit-Fitting-for-Cantex-PVC-Conduits-R5140104/202043511",
+      "last_seen": "2026-11-24T20:33:18.486346+00:00"
+    },
+    "202043515": {
+      "title": ".75 in. PVC Female Adapter Conduit Fitting for Cantex PVC Conduits",
+      "url": "https://www.homedepot.com/p/Cantex-75-in-PVC-Female-Adapter-Conduit-Fitting-for-Cantex-PVC-Conduits-R5140044/202043515",
+      "last_seen": "2026-11-24T20:33:18.486348+00:00"
+    },
+    "100141141": {
+      "title": "1-1/2 in. x 2-1/2 in. Conduit Zinc-Plated Steel Nail Plate (1-pack)",
+      "url": "https://www.homedepot.com/p/Halex-1-1-2-in-x-2-1-2-in-Conduit-Zinc-Plated-Steel-Nail-Plate-1-pack-62800/100141141",
+      "last_seen": "2026-11-24T20:33:18.486350+00:00"
+    },
+    "100403996": {
+      "title": "1 in. Electrical PVC Standard Coupling (E940F-24-HD)",
+      "url": "https://www.homedepot.com/p/Carlon-1-in-Electrical-PVC-Standard-Coupling-E940F-24-HD-E940F-24-HD/100403996",
+      "last_seen": "2026-11-24T20:33:18.486353+00:00"
+    },
+    "100036991": {
+      "title": "1-Gang White Decora/Rocker Plastic Standard Wall Plate (1-Pack) 80401-W",
+      "url": "https://www.homedepot.com/p/Leviton-1-Gang-White-Decora-Rocker-Plastic-Standard-Wall-Plate-1-Pack-80401-W-R52-80401-00W/100036991",
+      "last_seen": "2026-11-24T20:33:18.486355+00:00"
+    },
+    "100014221": {
+      "title": "1-Gang White Toggle Plastic Standard Wall Plate (1-Pack) 88001-W",
+      "url": "https://www.homedepot.com/p/Leviton-1-Gang-White-Toggle-Plastic-Standard-Wall-Plate-1-Pack-88001-W-R52-88001-00W/100014221",
+      "last_seen": "2026-11-24T20:33:18.486357+00:00"
+    },
+    "100356827": {
+      "title": "1-Gang Ivory Duplex Outlet/Receptacle Plastic Standard Wall Plate (1-Pack) 86003-I",
+      "url": "https://www.homedepot.com/p/Leviton-1-Gang-Ivory-Duplex-Outlet-Receptacle-Plastic-Standard-Wall-Plate-1-Pack-86003-I-R51-86003-00I/100356827",
+      "last_seen": "2026-11-24T20:33:18.486359+00:00"
+    },
+    "100025171": {
+      "title": "1-Gang White Duplex Outlet/Receptacle Plastic Standard Wall Plate (1-Pack) 88003-W",
+      "url": "https://www.homedepot.com/p/Leviton-1-Gang-White-Duplex-Outlet-Receptacle-Plastic-Standard-Wall-Plate-1-Pack-88003-W-R52-88003-00W/100025171",
+      "last_seen": "2026-11-24T20:33:18.486362+00:00"
+    },
+    "202059793": {
+      "title": "1-Gang Light Almond Duplex Outlet/Receptacle Plastic Standard Wall Plate (1-Pack) 78003-T",
+      "url": "https://www.homedepot.com/p/Leviton-1-Gang-Light-Almond-Duplex-Outlet-Receptacle-Plastic-Standard-Wall-Plate-1-Pack-78003-T-R56-78003-00T/202059793",
+      "last_seen": "2026-11-24T20:33:18.486364+00:00"
+    },
+    "100356837": {
+      "title": "1-Gang White Blank Plate Plastic Standard Wall Plate (1-Pack) 88014-W",
+      "url": "https://www.homedepot.com/p/Leviton-1-Gang-White-Blank-Plate-Plastic-Standard-Wall-Plate-1-Pack-88014-W-R52-88014-00W/100356837",
+      "last_seen": "2026-11-24T20:33:18.486366+00:00"
+    },
+    "202059792": {
+      "title": "1-Gang Light Almond Blank Plate Plastic Standard Wall Plate (1-Pack) 78014-T",
+      "url": "https://www.homedepot.com/p/Leviton-1-Gang-Light-Almond-Blank-Plate-Plastic-Standard-Wall-Plate-1-Pack-78014-T-R56-78014-00T/202059792",
+      "last_seen": "2026-11-24T20:33:18.486368+00:00"
     }
   },
   "alerted": [
     "312695238"
   ],
-  "cursor": 129
+  "cursor": 159
 }
